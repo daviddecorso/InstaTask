@@ -18,7 +18,7 @@ Canvas nicely provides each user with a live link to their calendar .ical, so ou
 - [Product Backlog](https://trello.com/b/4OQlQMk6/instatask)
 - [Sprint Backlog](https://trello.com/b/4OQlQMk6/instatask)
 - [Requirements](https://trello.com/b/4OQlQMk6/instatask)
-- Burndown Chart
+- [Burndown Chart](https://cdn.discordapp.com/attachments/800004461979893785/807780638987649054/unknown.png)
 - Velocity Chart
 - System Architecture
 - Source Code

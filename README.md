@@ -19,7 +19,7 @@ Canvas nicely provides each user with a live link to their calendar .ical, so ou
 - [Sprint Backlog](https://trello.com/b/4OQlQMk6/instatask)
 - [Requirements](https://trello.com/b/4OQlQMk6/instatask)
 - [Burndown Chart](https://cdn.discordapp.com/attachments/800004461979893785/807780638987649054/unknown.png)
-- Velocity Chart
+- [Velocity Chart](https://cdn.discordapp.com/attachments/800004461979893785/807792326474858496/unknown.png)
 - System Architecture
 - Source Code
 - Automated Tests
@@ -34,4 +34,4 @@ David DeCorso: App framework, database setup, dev environment setup.
 
 Sean Kemp: 
 
-Lucas Rossell: 
+Lucas Rossell: Database + backend plan & setup, dev environment setup.

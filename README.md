@@ -26,9 +26,9 @@ Canvas nicely provides each user with a live link to their calendar .ical, so ou
 - Product Demonstration
 
 ### Task Allocation
-Moses Afrane: requirements, dev environment setup
+Moses Afrane: Requirements, dev environment setup.
 
-Ethan Beaupre: 
+Ethan Beaupre: Requirements, dev environment setup.
 
 David DeCorso: App framework, database setup, dev environment setup.
 

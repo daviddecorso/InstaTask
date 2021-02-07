@@ -32,6 +32,6 @@ Ethan Beaupre: Requirements, dev environment setup.
 
 David DeCorso: App framework, database setup, dev environment setup.
 
-Sean Kemp: 
+Sean Kemp: database help, unit test dev, dev environment setup
 
 Lucas Rossell: Database + backend plan & setup, dev environment setup.

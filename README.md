@@ -30,7 +30,7 @@ Moses Afrane:
 
 Ethan Beaupre: 
 
-David DeCorso: 
+David DeCorso: App framework, database setup, dev environment setup.
 
 Sean Kemp: 
 

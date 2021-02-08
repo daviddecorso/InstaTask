@@ -1,15 +1,21 @@
-import './App.sass';
-import React from 'react';
-import Nav from './components/Nav';
-import Tabs from './components/Tabs';
+import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import "./App.sass";
+import Nav from "./components/Nav";
+import TaskView from "./components/TaskView";
+import Login from "./components/Login";
+import Import from "./components/Import";
 
 function App() {
   return (
-    <div className="App">
-      <Nav />
-      
-      <Tabs />
-    </div>
+    <Router>
+      <div className="App">
+        <Nav />
+        <Route path="/" exact component={TaskView} />
+        <Route path="/login" component={Login} />
+        <Route path="/import" component={Import} />
+      </div>
+    </Router>
   );
 }
 

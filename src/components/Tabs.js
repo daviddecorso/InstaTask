@@ -1,3 +1,7 @@
+/* Disabling a linter warning that will be irrelevant
+    when a proper href value is provdided. */
+/* eslint-disable jsx-a11y/anchor-is-valid */
+
 const Tabs = () => {
   return (
     <div>

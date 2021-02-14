@@ -35,3 +35,26 @@ David DeCorso: App framework, database setup, dev environment setup.
 Sean Kemp: database help, unit test dev, dev environment setup
 
 Lucas Rossell: Database + backend plan & setup, dev environment setup.
+
+
+# Sprint 2
+- [Product Backlog](https://trello.com/b/4OQlQMk6/instatask)
+- [Sprint Backlog](https://trello.com/b/4OQlQMk6/instatask)
+- [Requirements](https://trello.com/b/4OQlQMk6/instatask)
+- [Burndown Chart](https://cdn.discordapp.com/attachments/800004461979893785/810651299771187230/unknown.png)
+- [Velocity Chart](https://cdn.discordapp.com/attachments/800004461979893785/810651328865894410/unknown.png)
+- System Architecture
+- Source Code
+- Automated Tests
+- Product Demonstration
+
+### Task Allocation
+Moses Afrane: 
+
+Ethan Beaupre: 
+
+David DeCorso: 
+
+Sean Kemp: 
+
+Lucas Rossell: Began work on database requirements for user story [001]. Assisted with creating system architecture documents + supporting charts.

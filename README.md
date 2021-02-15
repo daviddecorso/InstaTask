@@ -56,6 +56,6 @@ Ethan Beaupre:
 
 David DeCorso: 
 
-Sean Kemp: 
+Sean Kemp: helped create architecture documents
 
 Lucas Rossell: Began work on database requirements for user story [001]. Assisted with creating system architecture documents + supporting charts.

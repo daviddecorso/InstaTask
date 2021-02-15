@@ -43,6 +43,7 @@ Lucas Rossell: Database + backend plan & setup, dev environment setup.
 - [Requirements](https://trello.com/b/4OQlQMk6/instatask)
 - [Burndown Chart](https://cdn.discordapp.com/attachments/800004461979893785/810651299771187230/unknown.png)
 - [Velocity Chart](https://cdn.discordapp.com/attachments/800004461979893785/810651328865894410/unknown.png)
+- [Class Diagram](https://cdn.discordapp.com/attachments/800004461979893785/810680260303388702/InstaTask_class_diagram_2.png)
 - System Architecture
 - Source Code
 - Automated Tests

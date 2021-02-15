@@ -49,7 +49,7 @@ Lucas Rossell: Database + backend plan & setup, dev environment setup.
 - [Product Demonstration](https://www.youtube.com/watch?v=GIDPLIaiHyg)
 
 ### Task Allocation
-Moses Afrane: 
+Moses Afrane: Helped with creation of diagrams
 
 Ethan Beaupre: Began work on the calendar link submission component
 

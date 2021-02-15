@@ -45,6 +45,8 @@ Lucas Rossell: Database + backend plan & setup, dev environment setup.
 - [Velocity Chart](https://cdn.discordapp.com/attachments/800004461979893785/810651328865894410/unknown.png)
 - [Class Diagram](https://cdn.discordapp.com/attachments/800004461979893785/810680260303388702/InstaTask_class_diagram_2.png)
 - [Component Diagram](https://cdn.discordapp.com/attachments/800004461979893785/810688208216129536/UML_Component_Diagram_1.jpg)
+- [Container Diagram](https://media.discordapp.net/attachments/800004461979893785/810688334879522816/Container_Diagram.png?width=729&height=683)
+- [UI Diagram](https://media.discordapp.net/attachments/800004461979893785/810257479006814208/UI_Diagram.jpg?width=791&height=683)
 - System Architecture
 - Source Code
 - Automated Tests
@@ -53,7 +55,7 @@ Lucas Rossell: Database + backend plan & setup, dev environment setup.
 ### Task Allocation
 Moses Afrane: 
 
-Ethan Beaupre: 
+Ethan Beaupre: Began work on the calendar link submission component
 
 David DeCorso: 
 

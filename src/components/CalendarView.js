@@ -14,23 +14,15 @@ const localizer = dateFnsLocalizer({
   locales,
 });
 
-const testEvent = {
-  title: "Test",
-  start: new Date("February 10, 2021 03:24:00"),
-  end: new Date("February 10, 2021 04:24:00"),
-  description: "???",
-};
-
-const myEventsList = [testEvent];
-
 function CalendarView(props) {
   return (
     <div>
       <Calendar
         localizer={localizer}
-        events={myEventsList}
-        startAccessor="start"
-        endAccessor="end"
+        events={props.events}
+        startAccessor="DTSTART"
+        endAccessor="DTEND"
+        titleAccessor="SUMMARY"
         style={{ height: 500 }}
       />
     </div>

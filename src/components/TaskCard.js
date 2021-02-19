@@ -1,3 +1,7 @@
+/* Disabling a linter warning that is caused by the CSS
+ * framework and can't be fixed without undue effort. */
+/* eslint-disable jsx-a11y/anchor-is-valid */
+
 import React, { useState } from "react";
 
 // Style for task cards

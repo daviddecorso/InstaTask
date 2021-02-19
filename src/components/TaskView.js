@@ -1,30 +1,69 @@
 import React from "react";
 import { useState } from "react";
+import { useMediaQuery } from "react-responsive";
 import Tabs from "./Tabs";
 import TaskCard from "./TaskCard";
 import CalendarView from "./CalendarView";
 
 function TaskView(props) {
+  // Determines if the view is mobile
+  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+
+  // State that stores a user's calendar events
   const [events, setEvents] = useState(testEvents);
+
+  // State that tracks which mobile view is selected
+  const [activeTab, setTab] = useState("todo");
+
+  // States that control which component should be rendered on mobile (todo view is default)
+  const [todoView, setTodoView] = useState(true);
+  const [calView, setCalView] = useState(!isMobile);
+
+  // This function renders the proper components when the screen is resized.
+  window.onresize = function () {
+    if (isMobile) {
+      if (activeTab === "todo") {
+        setTodoView(true);
+        setCalView(false);
+      } else if (activeTab === "cal") {
+        setCalView(true);
+        setTodoView(false);
+      }
+    } else {
+      setCalView(true);
+      setTodoView(true);
+    }
+  };
 
   return (
     <div>
-      {/* <Tabs /> */}
+      {isMobile && (
+        <Tabs
+          activeTab={activeTab}
+          setTab={setTab}
+          setTodoView={setTodoView}
+          setCalView={setCalView}
+        />
+      )}
       <div class="container">
         <br />
       </div>
-      <div class="columns">
-        <div class="column">
-          {/* Displays a list of tasks */}
-          {events.map((event) => (
-            <div class="block" key={event.UID}>
-              <TaskCard event={event} />
-            </div>
-          ))}
-        </div>
-        <div class="column">
-          <CalendarView events={events} />
-        </div>
+      <div id="column" class="columns">
+        {todoView && (
+          <div id="column" class="column">
+            {/* Displays a list of tasks */}
+            {events.map((event) => (
+              <div class="block" key={event.UID}>
+                <TaskCard event={event} />
+              </div>
+            ))}
+          </div>
+        )}
+        {calView && (
+          <div id="column" class="column">
+            <CalendarView events={events} />
+          </div>
+        )}
       </div>
     </div>
   );

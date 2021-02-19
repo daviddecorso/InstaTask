@@ -6,3 +6,15 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+@media only screen and (max-width: 768px) {
+  #column {
+    padding-right: 0px;
+    margin-right: 0px;
+  }
+
+  .column {
+    padding-right: 0px;
+    margin-right: 0px;
+  }
+}

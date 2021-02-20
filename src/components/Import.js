@@ -3,36 +3,36 @@ import React from "react";
 function Import() {
   return (
     <div>
-      <div class="section">
-        <div class="container">
-          <h1 class="title">Import Your Calendar:</h1>
-          <h5 class="subtitle">
+      <div className="section">
+        <div className="container">
+          <h1 className="title">Import Your Calendar:</h1>
+          <h5 className="subtitle">
             Please provide the .ics link from canvas so we can display it in the
             app. <br /> (Instructions and UX improvements to be implemented
             later.)
           </h5>
 
-          <div class="field">
-            <label class="label is-medium">Calendar Link</label>
-            <div class="control">
+          <div className="field">
+            <label className="label is-medium">Calendar Link</label>
+            <div className="control">
               <input
-                class="input"
+                className="input"
                 type="text"
                 placeholder="Text input"
                 style={{ color: "black" }}
               ></input>
             </div>
           </div>
-          <div class="field">
-            <div class="control">
-              <button class="button is-link" id="import-submit">
+          <div className="field">
+            <div className="control">
+              <button className="button is-link" id="import-submit">
                 Submit
               </button>
             </div>
           </div>
         </div>
 
-        <div class="container">
+        <div className="container">
           <p>
             <br /> This is where we are going to ask a user to give us their
             .ics link the first time they login.

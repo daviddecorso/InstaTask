@@ -2,12 +2,11 @@ const Nav = () => {
   return (
     <div>
       <nav
-        class="navbar is-primary"
+        className="navbar is-primary"
         role="navigation"
         aria-label="main navigation"
       >
-        <div
-        class="navbar-brand"></div>
+        <div className="navbar-brand"></div>
       </nav>
     </div>
   );

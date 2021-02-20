@@ -45,22 +45,22 @@ function TaskView(props) {
           setCalView={setCalView}
         />
       )}
-      <div class="container">
+      <div className="container">
         <br />
       </div>
-      <div id="column" class="columns">
+      <div id="column" className="columns">
         {todoView && (
-          <div id="column" class="column">
+          <div id="column" className="column">
             {/* Displays a list of tasks */}
             {events.map((event) => (
-              <div class="block" key={event.UID}>
+              <div className="block" key={event.UID}>
                 <TaskCard event={event} />
               </div>
             ))}
           </div>
         )}
         {calView && (
-          <div id="column" class="column">
+          <div id="column" className="column">
             <CalendarView events={events} />
           </div>
         )}

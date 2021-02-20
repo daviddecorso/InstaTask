@@ -22,22 +22,22 @@ function TaskCard(props) {
 
   return (
     <div>
-      <div class="card">
-        <header class="card-header">
-          <p class="card-header-title">
+      <div className="card">
+        <header className="card-header">
+          <p className="card-header-title">
             {props.event.SUMMARY} - Friday Feb 12, 2:24PM
           </p>
           <button
             onClick={onClick}
             id="card-button"
-            class="card-header-icon"
+            className="card-header-icon"
             style={cardStyle}
             aria-label="more options"
           >
-            <span class="icon">
+            <span className="icon">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="icon icon-tabler icon-tabler-chevron-down"
+                className="icon icon-tabler icon-tabler-chevron-down"
                 width="28"
                 height="28"
                 viewBox="0 0 24 24"
@@ -56,14 +56,14 @@ function TaskCard(props) {
         {/* Only displays detail if toggleDetail is set to true. */}
         {toggleDetail && (
           <>
-            <div class="card-content">
-              <div class="content">{props.event.DESCRIPTION}</div>
+            <div className="card-content">
+              <div className="content">{props.event.DESCRIPTION}</div>
             </div>
-            <footer class="card-footer">
-              <a href="#" class="card-footer-item">
+            <footer className="card-footer">
+              <a href="#" className="card-footer-item">
                 Edit
               </a>
-              <a href="#" class="card-footer-item">
+              <a href="#" className="card-footer-item">
                 Done
               </a>
             </footer>

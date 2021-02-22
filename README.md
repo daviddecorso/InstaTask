@@ -51,7 +51,7 @@ Lucas Rossell: Database + backend plan & setup, dev environment setup.
 ### Task Allocation
 Moses Afrane: Helped with creation of diagrams
 
-Ethan Beaupre: Validate calendar links, create add task button
+Ethan Beaupre: Helped with acrhitecture diagrams, began work on requirements for user story [001]
 
 David DeCorso: Helped with architecture documents, created frontend UI for taskview page
 
@@ -75,7 +75,7 @@ Lucas Rossell: Began work on database requirements for user story [001]. Assiste
 ### Task Allocation
 Moses Afrane: 
 
-Ethan Beaupre: 
+Ethan Beaupre: Continued work on user story [003], updated our UI diagram, wrote manual tests
 
 David DeCorso: Added functionality to task cards, created mobile web view, wrote URL and date parsing functions, wrote automated tests.
 

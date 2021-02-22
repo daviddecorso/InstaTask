@@ -67,8 +67,9 @@ Lucas Rossell: Began work on database requirements for user story [001]. Assiste
 - [Burndown Chart](https://cdn.discordapp.com/attachments/800004461979893785/813246773841362954/unknown.png)
 - [Velocity Chart](https://cdn.discordapp.com/attachments/800004461979893785/813245230648000562/unknown.png)
 - [System Architecture](https://github.com/daviddecorso/InstaTask/blob/main/artifacts/architecture.md)
-- Source Code
-- Automated Tests
+- [Frontend Source Code](https://github.com/daviddecorso/InstaTask/tree/main/src)
+- [Backend Source Code](https://github.com/daviddecorso/InstaTask/tree/main/backend)
+- [Automated Tests](https://github.com/daviddecorso/InstaTask/tree/main/backend/test)
 - Product Demonstration
 
 ### Task Allocation
@@ -76,7 +77,7 @@ Moses Afrane:
 
 Ethan Beaupre: 
 
-David DeCorso: 
+David DeCorso: Added functionality to task cards, created mobile web view, wrote URL and date parsing functions, wrote automated tests.
 
 Sean Kemp: 
 

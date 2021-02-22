@@ -28,7 +28,7 @@ Canvas nicely provides each user with a live link to their calendar .ical, so ou
 ### Task Allocation
 Moses Afrane: Requirements, dev environment setup.
 
-Ethan Beaupre: Requirements, dev environment setup.
+Ethan Beaupre: Validate .ics import, create add task button
 
 David DeCorso: App framework, database setup, dev environment setup.
 

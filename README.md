@@ -51,7 +51,7 @@ Lucas Rossell: Database + backend plan & setup, dev environment setup.
 ### Task Allocation
 Moses Afrane: Helped with creation of diagrams
 
-Ethan Beaupre: Began work on the calendar link submission component
+Ethan Beaupre: Validate calendar links, create add task button
 
 David DeCorso: Helped with architecture documents, created frontend UI for taskview page
 

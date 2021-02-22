@@ -58,3 +58,26 @@ David DeCorso: Helped with architecture documents, created frontend UI for taskv
 Sean Kemp: helped create architecture documents
 
 Lucas Rossell: Began work on database requirements for user story [001]. Assisted with creating system architecture documents + supporting charts.
+
+
+# Sprint 3
+- [Product Backlog](https://trello.com/b/4OQlQMk6/instatask)
+- [Sprint Backlog](https://trello.com/b/4OQlQMk6/instatask)
+- [Requirements](https://trello.com/b/4OQlQMk6/instatask)
+- [Burndown Chart](https://cdn.discordapp.com/attachments/800004461979893785/813246773841362954/unknown.png)
+- [Velocity Chart](https://cdn.discordapp.com/attachments/800004461979893785/813245230648000562/unknown.png)
+- [System Architecture](https://github.com/daviddecorso/InstaTask/blob/main/artifacts/architecture.md)
+- Source Code
+- Automated Tests
+- Product Demonstration
+
+### Task Allocation
+Moses Afrane: 
+
+Ethan Beaupre: 
+
+David DeCorso: 
+
+Sean Kemp: 
+
+Lucas Rossell: Contributed code for user story [003] as well as some supportive code for the backend.

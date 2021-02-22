@@ -45,7 +45,7 @@ The primary business rules/ethical practices we will follow in this project invo
 
 # User Interface Design
 
-![UI Diagram](https://media.discordapp.net/attachments/800004461979893785/810257479006814208/UI_Diagram.jpg?width=791&height=683)
+![UI Diagram](https://media.discordapp.net/attachments/800004461979893785/813261845396848680/UI_mockup.png?width=739&height=683)
 
 Our UI diagram shows the relationship between all of the pages comprising the entire application.
 

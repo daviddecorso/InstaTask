@@ -70,7 +70,7 @@ Lucas Rossell: Began work on database requirements for user story [001]. Assiste
 - [Frontend Source Code](https://github.com/daviddecorso/InstaTask/tree/main/src)
 - [Backend Source Code](https://github.com/daviddecorso/InstaTask/tree/main/backend)
 - [Automated Tests](https://github.com/daviddecorso/InstaTask/tree/main/backend/test)
-- Product Demonstration
+- [Product Demonstration](https://youtu.be/fcH76En2lBc)
 
 ### Task Allocation
 Moses Afrane: 

@@ -16,4 +16,4 @@ function canvasUrlToLink(link) {
   return firstLinkString + courseNum + secondLinkString + assignmentNum;
 }
 
-export default { canvasUrlToLink };
+module.exports = { canvasUrlToLink };

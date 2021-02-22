@@ -13,7 +13,7 @@ const userSchema = new Schema(
         defaultAlertTime: { type: Number, required: true, default: 24 },
         events: [
           {
-            dtstamp: { type: Date, required: true }, // string?
+            dtstamp: { type: Date, required: true },
             uid: { type: String, required: true },
             dtstart: { type: Date, required: true },
             dtend: { type: Date, required: false },
@@ -21,6 +21,7 @@ const userSchema = new Schema(
             location: { type: String, required: false },
             sequence: { type: Number, required: true },
             summary: { type: String, required: true },
+            url: { type: String, required: false },
             complete: { type: Boolean, required: true },
             hasAlerts: { type: Boolean, required: true },
             alerts: [Number],

@@ -5,7 +5,7 @@ import Tabs from "./Tabs";
 import TaskCard from "./TaskCard";
 import CalendarView from "./CalendarView";
 
-function TaskView(props) {
+function TaskView({ userID }) {
   // Determines if the view is mobile
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
 

@@ -3,29 +3,17 @@ import { useState } from "react";
 import axios from "axios";
 
 function Import() {
-  const [errorMessage, setErrorMessage] = useState("");
-
-  const validate = (value) => {
-    const importBox = document.getElementById("importBox");
-    if (importBox.value.includes(".ics")) {
-      setErrorMessage("Is a valid URL");
-    } else {
-      setErrorMessage("Is not a valid URL");
-    }
-  };
-
   const onClick = () => {
     const importBox = document.getElementById("importBox");
-    const calendarLink = importBox.value;
-    // Alert if invalid, set box to empty
-    // Contains check
-    // console.log(calStr)
-    /*axios.post('http://localhost:5000/users/add', {
-      calendarLink: calendarLink,
-      id: id,
-      displayName: displayName
-    })
-      .then(res => console.log(res.data))*/
+
+    if (importBox.value.includes(".ics")) {
+      axios.post('http://localhost:5000/users/add', {
+        calendarLink: importBox.value,
+      })
+      .then(res => console.log(res.data))
+    } else {
+      window.alert("Please submit a valid .ics URL.");
+    }
   };
 
   return (
@@ -38,7 +26,6 @@ function Import() {
             app. <br /> (Instructions and UX improvements to be implemented
             later.)
           </h5>
-
           <div className="field">
             <label className="label is-medium">Calendar Link</label>
             <div className="control">

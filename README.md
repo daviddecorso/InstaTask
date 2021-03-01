@@ -87,8 +87,8 @@ Lucas Rossell: Contributed code for user story [003] as well as some supportive 
 - [Product Backlog](https://trello.com/b/4OQlQMk6/instatask)
 - [Sprint Backlog](https://trello.com/b/4OQlQMk6/instatask)
 - [Requirements](https://trello.com/b/4OQlQMk6/instatask)
-- Burndown Chart
-- Velocity Chart
+- [Burndown Chart](https://cdn.discordapp.com/attachments/800004461979893785/815800995405234186/unknown.png)
+- [Velocity Chart](https://cdn.discordapp.com/attachments/800004461979893785/815800968864202782/unknown.png)
 - [System Architecture](https://github.com/daviddecorso/InstaTask/blob/main/artifacts/architecture.md)
 - [Frontend Source Code](https://github.com/daviddecorso/InstaTask/tree/main/src)
 - [Backend Source Code](https://github.com/daviddecorso/InstaTask/tree/main/backend)
@@ -102,6 +102,6 @@ Ethan Beaupre:
 
 David DeCorso: Created account creation/login system (user story [005])
 
-Sean Kemp: 
+Sean Kemp: Helped create documents for sprint
 
-Lucas Rossell: 
+Lucas Rossell: Assisted with backend implementation of user story [005] and began work on stories [004] and [006].

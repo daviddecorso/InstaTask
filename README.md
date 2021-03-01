@@ -82,3 +82,26 @@ David DeCorso: Added functionality to task cards, created mobile web view, wrote
 Sean Kemp: 
 
 Lucas Rossell: Contributed code for user story [003] as well as some supportive code for the backend.
+
+# Sprint 4
+- [Product Backlog](https://trello.com/b/4OQlQMk6/instatask)
+- [Sprint Backlog](https://trello.com/b/4OQlQMk6/instatask)
+- [Requirements](https://trello.com/b/4OQlQMk6/instatask)
+- Burndown Chart
+- Velocity Chart
+- [System Architecture](https://github.com/daviddecorso/InstaTask/blob/main/artifacts/architecture.md)
+- [Frontend Source Code](https://github.com/daviddecorso/InstaTask/tree/main/src)
+- [Backend Source Code](https://github.com/daviddecorso/InstaTask/tree/main/backend)
+- [Automated Tests](https://github.com/daviddecorso/InstaTask/tree/main/backend/test)
+- Product Demonstration
+
+### Task Allocation
+Moses Afrane: 
+
+Ethan Beaupre: 
+
+David DeCorso: Created account creation/login system (user story [005])
+
+Sean Kemp: 
+
+Lucas Rossell: 

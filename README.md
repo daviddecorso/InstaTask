@@ -93,7 +93,7 @@ Lucas Rossell: Contributed code for user story [003] as well as some supportive 
 - [Frontend Source Code](https://github.com/daviddecorso/InstaTask/tree/main/src)
 - [Backend Source Code](https://github.com/daviddecorso/InstaTask/tree/main/backend)
 - [Automated Tests](https://github.com/daviddecorso/InstaTask/tree/main/backend/test)
-- Product Demonstration
+- [Product Demonstration](https://www.youtube.com/watch?v=pcugv01aiZk)
 
 ### Task Allocation
 Moses Afrane: 

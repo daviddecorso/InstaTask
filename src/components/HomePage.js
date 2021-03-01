@@ -3,8 +3,7 @@ import TaskView from "./TaskView";
 import Login from "./Login";
 import Nav from "./Nav";
 
-function HomePage(props) {
-  const [user, setUser] = useState({});
+function HomePage({ user, setUser }) {
   const [err, setErr] = useState(null);
   const [authenticated, setAuth] = useState(false);
 

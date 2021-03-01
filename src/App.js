@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.sass";
 import HomePage from "./components/HomePage";
 
 function App() {
+  const [user, setUser] = useState({});
+
   return (
     <Router>
       <div>
-        <Route path="/" exact component={HomePage} />
+        <HomePage user={user} setUser={setUser} />
       </div>
     </Router>
   );

@@ -73,7 +73,7 @@ Lucas Rossell: Began work on database requirements for user story [001]. Assiste
 - [Product Demonstration](https://youtu.be/fcH76En2lBc)
 
 ### Task Allocation
-Moses Afrane: 
+Moses Afrane: Updated requirements with acceptance tests/requirements
 
 Ethan Beaupre: Continued work on user story [003], updated our UI diagram, wrote manual tests
 
@@ -96,7 +96,7 @@ Lucas Rossell: Contributed code for user story [003] as well as some supportive 
 - [Product Demonstration](https://www.youtube.com/watch?v=pcugv01aiZk)
 
 ### Task Allocation
-Moses Afrane: 
+Moses Afrane: Began work on task creation (user story [006])
 
 Ethan Beaupre: 
 

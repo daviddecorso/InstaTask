@@ -1,31 +1,31 @@
+Each consists of step number, steps to reproduce, and expected behavior.
+
 **Task Test**
-Step N:		Click the expand task arrow
-Step N+1:	Task card will expand with details
-Step N+2:	Click the collapse task arrow
-Step N+3:	Task card will collapse details
+1.          Click the expand task arrow                                     The task card should expand with details
+2.          Click the collapse task arrow                                   The task card should collapse details
 
 **Calendar Test**
-Step N:		Click the back calendar button
-Step N+1:	Calendar will go to the previous month
-Step N+2:	Click the next calendar button
-Step N+3:	Calendar will go to the current month
-Step N+4:	Click the week button
-Step N+5:	Calendar will go to a weekly view
-Step N+6:	Click the day button
-Step N+7:	Calendar will go to today's daily view
+
+1.          Click the back calendar button                                  The calendar should go to the previous month
+2.          Click the next calendar button                                  The calendar should go to the current month
+3.          Click the week button                                           The calendar should go to a weekly view
+4.          Click the day button                                            The calendar should go to today's daily view
 
 **Calendar Test 2**
-Step N:		Click today's date on the calendar
-Step N+1:	Calendar will go to today's daily view
-Step N+2:	Click tomorrow's date on the calendar
-Step N+3:	Calendar will go to tomorrow's daily view
+
+1.          Click today's date on the calendar                              The calendar should go to today's daily view
+2.          Click tomorrow's date on the calendar                           The calendar should go to tomorrow's daily view
 
 **Import Test**
-Step N:		Type an random phrase into the text box on the import page
-Step N+1:	Click the submit button
-Step N+2:	The screen will alert you that your link is invalid
+
+1.          Open a browser and enter the /import URL                        The import page will display
+2.          Click the text box                                              Text can be entered											
+3.          Type a string not containing ".ics" into the text box on        The text should show up in the box 
+            the import page
+4.          Click the submit button                                         The screen should alert that your link is invalid
 
 **Login Test**
-Step N:     Open a browser and enter the /login URL
-Step N+1:   Click the "Sign in with Google" button
-Step N+2:   
+
+1.          Open a browser and enter the /login URL                         The login page should display
+2.          Click the sign in with Google button                            Google's login screen should display
+3.          Log in throguh Google authentication                            The home page should display

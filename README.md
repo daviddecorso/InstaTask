@@ -98,7 +98,7 @@ Lucas Rossell: Contributed code for user story [003] as well as some supportive 
 ### Task Allocation
 Moses Afrane: Began work on task creation (user story [006])
 
-Ethan Beaupre: 
+Ethan Beaupre: Created login page for user story [005], finished .ics link validation on import for user story [003]
 
 David DeCorso: Created account creation/login system (user story [005])
 

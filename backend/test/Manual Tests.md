@@ -19,7 +19,7 @@ Each consists of step number, steps to reproduce, and expected behavior.
 **Import Test**
 
 1.          Open a browser and enter the /import URL                        The import page will display
-2.          Click the text box                                              Text can be entered											
+2.          Click the text box                                              Text can be entered
 3.          Type a string not containing ".ics" into the text box on        The text should show up in the box 
             the import page
 4.          Click the submit button                                         The screen should alert that your link is invalid

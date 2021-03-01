@@ -24,8 +24,3 @@ Step N+3:	Calendar will go to tomorrow's daily view
 Step N:		Type an random phrase into the text box on the import page
 Step N+1:	Click the submit button
 Step N+2:	The screen will alert you that your link is invalid
-
-**Login Test**
-Step N:     Open a browser and enter the /login URL
-Step N+1:   Click the "Sign in with Google" button
-Step N+2:   

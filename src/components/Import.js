@@ -2,11 +2,12 @@ import React from "react";
 import { useState } from "react";
 import axios from "axios";
 
-function Import({ user }) {
+function Import({ user, setImport }) {
   const onClick = () => {
     const importBox = document.getElementById("importBox");
 
     if (importBox.value.includes(".ics")) {
+      setImport(false);
       axios
         .put("http://localhost:5000/users/update/calendar", {
           user: user,
@@ -25,8 +26,7 @@ function Import({ user }) {
           <h1 className="title">Import Your Calendar:</h1>
           <h5 className="subtitle">
             Please provide the .ics link from canvas so we can display it in the
-            app. <br /> (Instructions and UX improvements to be implemented
-            later.)
+            app. <br />
           </h5>
           <div className="field">
             <label className="label is-medium">Calendar Link</label>
@@ -52,12 +52,17 @@ function Import({ user }) {
             </div>
           </div>
         </div>
-
+        <div className="container"></div>
+      </div>
+      <div className="section">
         <div className="container">
-          <p>
-            <br /> This is where we are going to ask a user to give us their
-            .ics link the first time they login.
-          </p>
+          <div className="help-link" style={{ textAlign: "center" }}>
+            <p class="title is-4">
+              <a href="/import/help" target="_blank" rel="noopener noreferrer">
+                How do I import my calendar?
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </div>

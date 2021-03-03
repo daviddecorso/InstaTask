@@ -16,12 +16,15 @@ function Login() {
                 eligendi soluta voluptate facere molestiae consequatur.
               </p>
               <br />
-              <a class="button is-light">About</a>
+              <a class="button is-light" href="/about">
+                About
+              </a>
             </div>
             <div class="column">
-              <br /><br />
+              <br />
+              <br />
               <a href="http://localhost:5000/auth/google">
-                <img src={btnNormal} alt="Sign-in with Google."/>
+                <img src={btnNormal} alt="Sign-in with Google." />
               </a>
             </div>
           </div>

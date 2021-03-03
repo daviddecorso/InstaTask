@@ -52,6 +52,18 @@ function Import({ user, setImport }) {
             </div>
           </div>
         </div>
+        <div className="container"></div>
+      </div>
+      <div className="section">
+        <div className="container">
+          <div className="help-link" style={{ textAlign: "center" }}>
+            <p class="title is-4">
+              <a href="/import/help" target="_blank" rel="noopener noreferrer">
+                How do I import my calendar?
+              </a>
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );

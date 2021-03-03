@@ -2,10 +2,15 @@ import React, { useState, useEffect } from "react";
 import TaskView from "./TaskView";
 import Login from "./Login";
 import Nav from "./Nav";
+import Import from "./Import";
 
 function HomePage({ user, setUser }) {
   const [err, setErr] = useState(null);
+  // State that tracks if the user is currently authenticated.
   const [authenticated, setAuth] = useState(false);
+
+  // State that tracks if the user has a calendar link associated with their profile.
+  const [displayImport, setImport] = useState(false);
 
   // Get user details on login
   useEffect(() => {
@@ -25,6 +30,12 @@ function HomePage({ user, setUser }) {
       .then((responseJson) => {
         setAuth(true);
         setUser(responseJson.user);
+
+        if (responseJson.user.calendarLink == null) {
+          setImport(true);
+        } else {
+          setImport(false);
+        }
       })
       .catch((error) => {
         setAuth(false);
@@ -35,6 +46,17 @@ function HomePage({ user, setUser }) {
   return (
     <div>
       <Nav authenticated={authenticated} setAuth={setAuth} />
+
+      {/* Displays import modal */}
+      {displayImport && (
+        <div class="modal is-active">
+          <div class="modal-background"></div>
+          <div class="modal-content">
+            <Import user={user} setImport={setImport} />
+          </div>
+        </div>
+      )}
+
       <div>{!authenticated ? <Login /> : <TaskView userID={user._id} />}</div>
     </div>
   );

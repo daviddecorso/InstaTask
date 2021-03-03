@@ -24,4 +24,13 @@ router.route("/add").post((req, res) => {
     .catch((err) => res.status(400).json("Error: " + err));
 });
 
+router.route("/update/calendar").put((req, res) => {
+  const id = req.body.user._id;
+  const calendarLink = req.body.calendarLink;
+  userModel
+    .findByIdAndUpdate(id, { calendarLink: calendarLink })
+    .then(() => res.status(200).json("Successfully updated link"))
+    .catch((err) => res.status(400).json("Error: " + err));
+});
+
 module.exports = router;

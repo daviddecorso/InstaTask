@@ -2,15 +2,17 @@ import React from "react";
 import { useState } from "react";
 import axios from "axios";
 
-function Import() {
+function Import({ user }) {
   const onClick = () => {
     const importBox = document.getElementById("importBox");
 
     if (importBox.value.includes(".ics")) {
-      axios.post('http://localhost:5000/users/add', {
-        calendarLink: importBox.value,
-      })
-      .then(res => console.log(res.data))
+      axios
+        .put("http://localhost:5000/users/update/calendar", {
+          user: user,
+          calendarLink: importBox.value,
+        })
+        .then((res) => console.log(res.data));
     } else {
       window.alert("Please submit a valid .ics URL.");
     }

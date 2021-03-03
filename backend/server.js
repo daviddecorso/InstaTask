@@ -4,7 +4,6 @@ const mongoose = require("mongoose");
 const passport = require("passport");
 const passportSetup = require("./config/passportSetup");
 const cookieSession = require("cookie-session");
-const csurf = require("csurf");
 
 require("dotenv").config();
 
@@ -27,8 +26,6 @@ app.use(
     secret: process.env.COOKIE_KEY,
   })
 );
-
-app.use(csurf());
 
 // Initialize passport
 app.use(passport.initialize());

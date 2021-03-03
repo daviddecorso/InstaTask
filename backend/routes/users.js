@@ -29,7 +29,7 @@ router.route("/update/calendar").put((req, res) => {
   const calendarLink = req.body.calendarLink;
   userModel
     .findByIdAndUpdate(id, { calendarLink: calendarLink })
-    .then(() => res.status(400).json("Successfully updated link"))
+    .then(() => res.status(200).json("Successfully updated link"))
     .catch((err) => res.status(400).json("Error: " + err));
 });
 

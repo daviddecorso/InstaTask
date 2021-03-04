@@ -17,10 +17,10 @@ async function parseICS(link) {
     if (events.hasOwnProperty(d)) {
       if (events[d].type == "VEVENT") {
         eventObj = {
-          dtstamp: dtStringToDate(events[d].dtstamp.toString()),
+          dtstamp: events[d].dtstamp,
           uid: events[d].uid,
-          dtstart: dtStringToDate(events[d].start.toString()),
-          dtend: dtStringToDate(events[d].end.toString()),
+          dtstart: events[d].start,
+          dtend: events[d].end,
           desc: events[d].description,
           location: events[d].location,
           sequence: events[d].sequence,

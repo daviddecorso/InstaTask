@@ -1,5 +1,6 @@
 /**
- * Inserts event array from parseICS to calendar in database
+ * Inserts event array from parseICS to calendar in database.
+ * Currently overwrites calendar every time.
  * @param {String} id
  * @param {Array} eventList
  */
@@ -12,7 +13,7 @@ async function populateCalendar(id, eventList) {
   user.calendar.events = eventList;
   await user
     .save()
-    .then(() => console.log("Successfully updated calendar.events"))
+    .then(() => console.log("Successfully updated calendar."))
     .catch((err) => console.log("Error: " + err));
 }
 module.exports = { populateCalendar };

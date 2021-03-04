@@ -14,16 +14,16 @@ const localizer = dateFnsLocalizer({
   locales,
 });
 
-function CalendarView(props) {
+function CalendarView({ events }) {
   return (
     <div>
       <Calendar
         localizer={localizer}
-        events={props.events}
-        startAccessor="DTSTART"
-        endAccessor="DTEND"
-        titleAccessor="SUMMARY"
-        style={{ height: 500 }}
+        events={events}
+        startAccessor="dtstart"
+        endAccessor="dtend"
+        titleAccessor="summary"
+        style={{ height: 700 }}
       />
     </div>
   );

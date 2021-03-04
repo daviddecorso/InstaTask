@@ -8,11 +8,18 @@ import About from "./components/About";
 
 function App() {
   const [user, setUser] = useState({});
+  // State that stores a user's calendar events
+  const [events, setEvents] = useState([]);
 
   return (
     <Router>
       <Route path="/" exact>
-        <HomePage user={user} setUser={setUser} />
+        <HomePage
+          user={user}
+          setUser={setUser}
+          events={events}
+          setEvents={setEvents}
+        />
       </Route>
       <Route path="/about" exact>
         <Nav />

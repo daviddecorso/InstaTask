@@ -11,7 +11,7 @@ const cardStyle = {
   outline: "none",
 };
 
-function TaskCard(props) {
+function TaskCard({ event }) {
   // Creates state for expandable task cards
   const [toggleDetail, setToggle] = useState(false);
 
@@ -25,7 +25,9 @@ function TaskCard(props) {
       <div className="card">
         <header className="card-header">
           <p className="card-header-title">
-            {props.event.SUMMARY} - Friday Feb 12, 2:24PM
+            <a href={event.url} style={{ color: "white" }}>
+              {event.summary} - {event.dtstart}
+            </a>
           </p>
           <button
             onClick={onClick}
@@ -57,7 +59,7 @@ function TaskCard(props) {
         {toggleDetail && (
           <>
             <div className="card-content">
-              <div className="content">{props.event.DESCRIPTION}</div>
+              <div className="content">{event.desc}</div>
             </div>
             <footer className="card-footer">
               <a href="#" className="card-footer-item">

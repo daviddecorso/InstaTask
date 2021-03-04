@@ -4,7 +4,7 @@ import Login from "./Login";
 import Nav from "./Nav";
 import Import from "./Import";
 
-function HomePage({ user, setUser }) {
+function HomePage({ user, setUser, events, setEvents }) {
   const [err, setErr] = useState(null);
   // State that tracks if the user is currently authenticated.
   const [authenticated, setAuth] = useState(false);
@@ -36,6 +36,10 @@ function HomePage({ user, setUser }) {
         } else {
           setImport(false);
         }
+
+        if (responseJson.user.calendar.events != null) {
+          setEvents(responseJson.user.calendar.events);
+        }
       })
       .catch((error) => {
         setAuth(false);
@@ -57,7 +61,13 @@ function HomePage({ user, setUser }) {
         </div>
       )}
 
-      <div>{!authenticated ? <Login /> : <TaskView userID={user._id} />}</div>
+      <div>
+        {!authenticated ? (
+          <Login />
+        ) : (
+          <TaskView events={events} setEvents={setEvents} />
+        )}
+      </div>
     </div>
   );
 }

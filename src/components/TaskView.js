@@ -5,12 +5,9 @@ import Tabs from "./Tabs";
 import TaskCard from "./TaskCard";
 import CalendarView from "./CalendarView";
 
-function TaskView({ userID }) {
+function TaskView({ events, setEvents }) {
   // Determines if the view is mobile
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
-
-  // State that stores a user's calendar events
-  const [events, setEvents] = useState(testEvents);
 
   // State that tracks which mobile view is selected
   const [activeTab, setTab] = useState("todo");
@@ -53,7 +50,7 @@ function TaskView({ userID }) {
           <div id="column" className="column">
             {/* Displays a list of tasks */}
             {events.map((event) => (
-              <div className="block" key={event.UID}>
+              <div className="block" key={event.uid}>
                 <TaskCard event={event} />
               </div>
             ))}

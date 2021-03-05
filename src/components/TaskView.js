@@ -16,6 +16,13 @@ function TaskView({ events, setEvents }) {
   const [todoView, setTodoView] = useState(true);
   const [calView, setCalView] = useState(!isMobile);
 
+  const cardContainerHeight = isMobile ? window.innerHeight - 200 : "700px";
+
+  const cardContainerStyle = {
+    height: cardContainerHeight,
+    overflow: "auto",
+  };
+
   // This function renders the proper components when the screen is resized.
   window.onresize = function () {
     if (isMobile) {
@@ -48,12 +55,14 @@ function TaskView({ events, setEvents }) {
       <div id="column" className="columns">
         {todoView && (
           <div id="column" className="column">
-            {/* Displays a list of tasks */}
-            {events.map((event) => (
-              <div className="block" key={event.uid}>
-                <TaskCard event={event} />
-              </div>
-            ))}
+            <div style={cardContainerStyle}>
+              {/* Displays a list of tasks */}
+              {events.map((event) => (
+                <div className="block" key={event.uid}>
+                  <TaskCard event={event} />
+                </div>
+              ))}
+            </div>
           </div>
         )}
         {calView && (

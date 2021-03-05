@@ -14,6 +14,9 @@ const eventSchema = new Schema({
   url: { type: String, required: false },
   complete: { type: Boolean, required: true, default: false },
   hasAlerts: { type: Boolean, required: true, default: false },
+  isZoom: { type: Boolean, required: true, default: false },
+  hidden: { type: Boolean, required: true, default: false },
+  course: { type: String, required: false },
   alerts: [Number],
 });
 

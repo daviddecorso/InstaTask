@@ -12,8 +12,8 @@ function Login() {
               {/* Logo image soon */}
               <h1 class="title is-1">InstaTask</h1>
               <p class="is-size-4">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
-                eligendi soluta voluptate facere molestiae consequatur.
+                A web app that imports your webcourses calendar and alerts you
+                when assignments are due.
               </p>
               <br />
               <a class="button is-light" href="/about">

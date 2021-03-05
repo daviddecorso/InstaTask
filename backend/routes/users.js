@@ -1,5 +1,7 @@
 const router = require("express").Router();
 let userModel = require("../models/user.model.js");
+const { parseICS } = require("../src/parseICS.js");
+const { updateCalendar } = require("../src/updateCalendar.js");
 
 router.route("/").get((req, res) => {
   userModel
@@ -27,9 +29,23 @@ router.route("/add").post((req, res) => {
 router.route("/update/calendar").put((req, res) => {
   const id = req.body.user._id;
   const calendarLink = req.body.calendarLink;
+  let eventList = async () => {
+    return await parseICS(calendarLink).then((list) => {
+      return list;
+    });
+  };
+  let tempList = eventList();
   userModel
     .findByIdAndUpdate(id, { calendarLink: calendarLink })
-    .then(() => res.status(200).json("Successfully updated link"))
+    .then(() => {
+      res.status(200).json("Successfully updated link");
+      tempList
+        .then((list) => updateCalendar(id, list))
+        .catch((err) => res.status(400).json("Error: " + err));
+    })
+    .then(() => {
+      res.send(req.body.user);
+    })
     .catch((err) => res.status(400).json("Error: " + err));
 });
 

@@ -4,7 +4,6 @@
  * @param {String} id
  * @param {Array} eventList
  */
-
 async function updateCalendar(id, eventList) {
   let userModel = require("../models/user.model.js");
   var user = await userModel

@@ -4,7 +4,6 @@
  * @param {String} id
  * @param {String} eventId
  */
-
 async function deleteCalendarEvent(id, eventId) {
   let userModel = require("../models/user.model.js");
   userModel

@@ -4,9 +4,9 @@ const { addCalendarEvent } = require("../src/addCalendarEvent.js");
 const { deleteCalendarEvent } = require("../src/deleteCalendarEvent.js");
 const { updateCalendar } = require("../src/updateCalendar.js");
 
-router.route("/").get((req, res) => {
+router.route("/:id").get((req, res) => {
   userModel
-    .findById(req.user._id)
+    .findById(req.params.id)
     .then((user) => res.json(user.calendar.events))
     .catch((err) => res.status(400).json("Error: " + err));
 });

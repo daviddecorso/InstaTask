@@ -3,6 +3,7 @@ import TaskView from "./TaskView";
 import Login from "./Login";
 import Nav from "./Nav";
 import Import from "./Import";
+import axios from "axios";
 
 function HomePage({ user, setUser, events, setEvents }) {
   const [err, setErr] = useState(null);
@@ -37,9 +38,12 @@ function HomePage({ user, setUser, events, setEvents }) {
           setImport(false);
         }
 
-        if (responseJson.user.calendar.events != null) {
-          setEvents(responseJson.user.calendar.events);
-        }
+        axios
+          .get("http://localhost:5000/events/" + responseJson.user._id)
+          .then((res) => {
+            console.log(res);
+            setEvents(res.data);
+          });
       })
       .catch((error) => {
         setAuth(false);

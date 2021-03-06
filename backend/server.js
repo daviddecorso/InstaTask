@@ -4,7 +4,6 @@ const mongoose = require("mongoose");
 const passport = require("passport");
 const passportSetup = require("./config/passportSetup");
 const cookieSession = require("cookie-session");
-
 require("dotenv").config();
 
 const app = express();
@@ -39,12 +38,13 @@ connection.once("open", () => {
   console.log("Successfully connected to MongoDB.");
 });
 
+// Use routes
 const usersRouter = require("./routes/users");
 app.use("/users", usersRouter);
-
-// Use the authentication routes
 const authRoutes = require("./routes/auth");
 app.use("/auth", authRoutes);
+const eventRoutes = require("./routes/events");
+app.use("/events", eventRoutes);
 
 // Check to see if the user is authenticated
 const authCheck = (req, res, next) => {

@@ -10,13 +10,6 @@ router.route("/").get((req, res) => {
     .catch((err) => res.status(400).json("Error: " + err));
 });
 
-router.route("/events/").get((req, res) => {
-  userModel
-    .findById(req.user._id)
-    .then((user) => res.json(user.calendar.events))
-    .catch((err) => res.status(400).json("Error: " + err));
-});
-
 router.route("/add").post((req, res) => {
   const id = req.body.id;
   const displayName = req.body.displayName;
@@ -49,9 +42,6 @@ router.route("/update/calendar").put((req, res) => {
       tempList
         .then((list) => updateCalendar(id, list))
         .catch((err) => res.status(400).json("Error: " + err));
-    })
-    .then(() => {
-      res.send(req.body.user);
     })
     .catch((err) => res.status(400).json("Error: " + err));
 });

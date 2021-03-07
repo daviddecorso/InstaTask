@@ -105,3 +105,26 @@ David DeCorso: Created account creation/login system (user story [005])
 Sean Kemp: Helped create documents for sprint
 
 Lucas Rossell: Assisted with backend implementation of user story [005] and began work on stories [004] and [006].
+
+# Sprint 5
+- [Product Backlog](https://trello.com/b/4OQlQMk6/instatask)
+- [Sprint Backlog](https://trello.com/b/4OQlQMk6/instatask)
+- [Requirements](https://trello.com/b/4OQlQMk6/instatask)
+- [Burndown Chart](https://cdn.discordapp.com/attachments/800004461979893785/815800995405234186/unknown.png)
+- [Velocity Chart](https://cdn.discordapp.com/attachments/800004461979893785/815800968864202782/unknown.png)
+- [System Architecture](https://github.com/daviddecorso/InstaTask/blob/main/artifacts/architecture.md)
+- [Frontend Source Code](https://github.com/daviddecorso/InstaTask/tree/main/src)
+- [Backend Source Code](https://github.com/daviddecorso/InstaTask/tree/main/backend)
+- Automated Tests
+- Product Demonstration
+
+### Task Allocation
+Moses Afrane:
+
+Ethan Beaupre:
+
+David DeCorso:
+
+Sean Kemp: created some user stories and began work on tutorial page for frontend [013],
+
+Lucas Rossell:

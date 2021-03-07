@@ -15,14 +15,12 @@ Canvas nicely provides each user with a live link to their calendar .ical, so ou
 - Lucas Rossell
 
 # Sprint 1
-- [Product Backlog](https://trello.com/b/4OQlQMk6/instatask)
-- [Sprint Backlog](https://trello.com/b/4OQlQMk6/instatask)
-- [Requirements](https://trello.com/b/4OQlQMk6/instatask)
+- [Trello Board](https://trello.com/b/4OQlQMk6/instatask)
 - [Burndown Chart](https://cdn.discordapp.com/attachments/800004461979893785/807780638987649054/unknown.png)
 - [Velocity Chart](https://cdn.discordapp.com/attachments/800004461979893785/807792326474858496/unknown.png)
 - System Architecture
 - Source Code
-- Automated Tests
+- Testing
 - Product Demonstration
 
 ### Task Allocation
@@ -38,14 +36,12 @@ Lucas Rossell: Database + backend plan & setup, dev environment setup.
 
 
 # Sprint 2
-- [Product Backlog](https://trello.com/b/4OQlQMk6/instatask)
-- [Sprint Backlog](https://trello.com/b/4OQlQMk6/instatask)
-- [Requirements](https://trello.com/b/4OQlQMk6/instatask)
+- [Trello Board](https://trello.com/b/4OQlQMk6/instatask)
 - [Burndown Chart](https://cdn.discordapp.com/attachments/800004461979893785/810651299771187230/unknown.png)
 - [Velocity Chart](https://cdn.discordapp.com/attachments/800004461979893785/810651328865894410/unknown.png)
 - [System Architecture](https://github.com/daviddecorso/InstaTask/blob/main/artifacts/architecture.md)
 - Source Code
-- Automated Tests
+- Testing
 - [Product Demonstration](https://www.youtube.com/watch?v=GIDPLIaiHyg)
 
 ### Task Allocation
@@ -61,15 +57,13 @@ Lucas Rossell: Began work on database requirements for user story [001]. Assiste
 
 
 # Sprint 3
-- [Product Backlog](https://trello.com/b/4OQlQMk6/instatask)
-- [Sprint Backlog](https://trello.com/b/4OQlQMk6/instatask)
-- [Requirements](https://trello.com/b/4OQlQMk6/instatask)
+- [Trello Board](https://trello.com/b/4OQlQMk6/instatask)
 - [Burndown Chart](https://cdn.discordapp.com/attachments/800004461979893785/813246773841362954/unknown.png)
 - [Velocity Chart](https://cdn.discordapp.com/attachments/800004461979893785/813245230648000562/unknown.png)
 - [System Architecture](https://github.com/daviddecorso/InstaTask/blob/main/artifacts/architecture.md)
 - [Frontend Source Code](https://github.com/daviddecorso/InstaTask/tree/main/src)
 - [Backend Source Code](https://github.com/daviddecorso/InstaTask/tree/main/backend)
-- [Automated Tests](https://github.com/daviddecorso/InstaTask/tree/main/backend/test)
+- [Testing](https://github.com/daviddecorso/InstaTask/tree/main/backend/test)
 - [Product Demonstration](https://youtu.be/fcH76En2lBc)
 
 ### Task Allocation
@@ -84,15 +78,13 @@ Sean Kemp:
 Lucas Rossell: Contributed code for user story [003] as well as some supportive code for the backend.
 
 # Sprint 4
-- [Product Backlog](https://trello.com/b/4OQlQMk6/instatask)
-- [Sprint Backlog](https://trello.com/b/4OQlQMk6/instatask)
-- [Requirements](https://trello.com/b/4OQlQMk6/instatask)
+- [Trello Board](https://trello.com/b/4OQlQMk6/instatask)
 - [Burndown Chart](https://cdn.discordapp.com/attachments/800004461979893785/815800995405234186/unknown.png)
 - [Velocity Chart](https://cdn.discordapp.com/attachments/800004461979893785/815800968864202782/unknown.png)
 - [System Architecture](https://github.com/daviddecorso/InstaTask/blob/main/artifacts/architecture.md)
 - [Frontend Source Code](https://github.com/daviddecorso/InstaTask/tree/main/src)
 - [Backend Source Code](https://github.com/daviddecorso/InstaTask/tree/main/backend)
-- [Automated Tests](https://github.com/daviddecorso/InstaTask/tree/main/backend/test)
+- [Testing](https://github.com/daviddecorso/InstaTask/tree/main/backend/test)
 - [Product Demonstration](https://www.youtube.com/watch?v=pcugv01aiZk)
 
 ### Task Allocation
@@ -107,15 +99,13 @@ Sean Kemp: Helped create documents for sprint
 Lucas Rossell: Assisted with backend implementation of user story [005] and began work on stories [004] and [006].
 
 # Sprint 5
-- [Product Backlog](https://trello.com/b/4OQlQMk6/instatask)
-- [Sprint Backlog](https://trello.com/b/4OQlQMk6/instatask)
-- [Requirements](https://trello.com/b/4OQlQMk6/instatask)
+- [Trello Board](https://trello.com/b/4OQlQMk6/instatask)
 - [Burndown Chart](https://cdn.discordapp.com/attachments/800004461979893785/815800995405234186/unknown.png)
 - [Velocity Chart](https://cdn.discordapp.com/attachments/800004461979893785/815800968864202782/unknown.png)
 - [System Architecture](https://github.com/daviddecorso/InstaTask/blob/main/artifacts/architecture.md)
 - [Frontend Source Code](https://github.com/daviddecorso/InstaTask/tree/main/src)
 - [Backend Source Code](https://github.com/daviddecorso/InstaTask/tree/main/backend)
-- Automated Tests
+- [Testing](https://github.com/daviddecorso/InstaTask/tree/main/backend/test)
 - Product Demonstration
 
 ### Task Allocation
@@ -123,7 +113,7 @@ Moses Afrane:
 
 Ethan Beaupre:
 
-David DeCorso:
+David DeCorso: Worked on displaying calendar data  on frontend [005], worked on parsing calendar data [004].
 
 Sean Kemp: created some user stories and began work on tutorial page for frontend [013],
 

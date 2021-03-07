@@ -4,7 +4,8 @@ const { canvasUrlToLink } = require("../src/canvasUrlToLink");
 test("test quiz link", () => {
   expect(
     canvasUrlToLink(
-      "https://webcourses.ucf.edu/calendar?include_contexts=course_1369388&month=02&year=2021#assignment_6864815"
+      "https://webcourses.ucf.edu/calendar?include_contexts=course_1369388&month=02&year=2021#assignment_6864815",
+      false
     )
   ).toBe("https://webcourses.ucf.edu/courses/1369388/assignments/6864815");
 });
@@ -13,7 +14,18 @@ test("test quiz link", () => {
 test("test assignment link", () => {
   expect(
     canvasUrlToLink(
-      "https://webcourses.ucf.edu/calendar?include_contexts=course_1369388&month=02&year=2021#assignment_6864826"
+      "https://webcourses.ucf.edu/calendar?include_contexts=course_1369388&month=02&year=2021#assignment_6864826",
+      false
     )
   ).toBe("https://webcourses.ucf.edu/courses/1369388/assignments/6864826");
+});
+
+// Tests the url parser on a zoom link
+test("test assignment link", () => {
+  expect(
+    canvasUrlToLink(
+      "https://webcourses.ucf.edu/calendar?include_contexts=course_1369388&month=02&year=2021#calendar_event_2178305",
+      true
+    )
+  ).toBe("https://webcourses.ucf.edu/courses/1369388/calendar_events/2178305");
 });

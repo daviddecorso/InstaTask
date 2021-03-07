@@ -3,6 +3,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 
 import React, { useState } from "react";
+import format from "date-fns/format";
 
 // Style for task cards
 const cardStyle = {
@@ -26,7 +27,8 @@ function TaskCard({ event }) {
         <header className="card-header">
           <p className="card-header-title">
             <a href={event.url} style={{ color: "white" }}>
-              {event.summary} - {event.dtstart}
+              [{event.course}] {event.summary} -{" "}
+              {format(new Date(event.dtstart), "eeee MMM d, h:mm aaa")}
             </a>
           </p>
           <button

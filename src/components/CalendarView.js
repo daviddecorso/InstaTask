@@ -23,7 +23,7 @@ function CalendarView({ events }) {
         startAccessor="dtstart"
         endAccessor="dtend"
         titleAccessor="summary"
-        style={{ height: 700 }}
+        style={{ height: 700, maxWidth: window.innerWidth / 2 }}
       />
     </div>
   );

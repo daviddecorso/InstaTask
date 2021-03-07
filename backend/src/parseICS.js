@@ -1,3 +1,5 @@
+const { getCourse } = require("./getCourse");
+
 /**
  * Takes the URL canvas provides for the user calendar
  * and parses objects for all events from it.
@@ -8,14 +10,15 @@
 async function parseICS(link) {
   const ical = require("node-ical");
   const { canvasUrlToLink } = require("../src/canvasUrlToLink");
-  const { dtStringToDate } = require("../src/dtStringToDate");
   const { trimSummary } = require("../src/trimSummary");
+  const { determineIfZoom } = require("../src/determineIfZoom");
 
   var eventList = [];
   let events = await ical.async.fromURL(link);
   for (let d in events) {
     if (events.hasOwnProperty(d)) {
       if (events[d].type == "VEVENT") {
+        let isZoom = determineIfZoom(events[d].location);
         eventObj = {
           dtstamp: events[d].dtstamp,
           uid: events[d].uid,
@@ -23,9 +26,11 @@ async function parseICS(link) {
           dtend: events[d].end,
           desc: events[d].description,
           location: events[d].location,
+          isZoom: isZoom,
           sequence: events[d].sequence,
           summary: trimSummary(events[d].summary),
-          url: canvasUrlToLink(events[d].url),
+          course: getCourse(events[d].summary),
+          url: canvasUrlToLink(events[d].url, isZoom),
           complete: events[d].completed,
           hasAlerts: events[d].hasAlerts,
           alerts: events[d].alerts,

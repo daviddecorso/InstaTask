@@ -100,8 +100,8 @@ Lucas Rossell: Assisted with backend implementation of user story [005] and bega
 
 # Sprint 5
 - [Trello Board](https://trello.com/b/4OQlQMk6/instatask)
-- [Burndown Chart](https://cdn.discordapp.com/attachments/800004461979893785/815800995405234186/unknown.png)
-- [Velocity Chart](https://cdn.discordapp.com/attachments/800004461979893785/815800968864202782/unknown.png)
+- [Burndown Chart](https://cdn.discordapp.com/attachments/800004461979893785/818291417649905744/unknown.png)
+- [Velocity Chart](https://cdn.discordapp.com/attachments/800004461979893785/818291449039814656/unknown.png)
 - [System Architecture](https://github.com/daviddecorso/InstaTask/blob/main/artifacts/architecture.md)
 - [Frontend Source Code](https://github.com/daviddecorso/InstaTask/tree/main/src)
 - [Backend Source Code](https://github.com/daviddecorso/InstaTask/tree/main/backend)
@@ -117,4 +117,4 @@ David DeCorso: Worked on displaying calendar data  on frontend [005], worked on 
 
 Sean Kemp: created some user stories and began work on tutorial page for frontend [013],
 
-Lucas Rossell:
+Lucas Rossell: Finished backend process for storing user calendar in the database, as well as a number of supporting functions for interacting with the calendar. This contributed towards user stories [004], [005], and [006].

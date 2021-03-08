@@ -1,6 +1,6 @@
 /**
  * Deletes an event object from the user.calendar.events array
- * based on a given user id and event uid.
+ * based on a given user id and event id.
  * @param {String} id
  * @param {String} eventId
  */
@@ -9,7 +9,7 @@ async function deleteCalendarEvent(id, eventId) {
   userModel
     .findByIdAndUpdate(
       id,
-      { $pull: { "calendar.events": { uid: eventId } } },
+      { $pull: { "calendar.events": { _id: eventId } } },
       { safe: true, upsert: true }
     )
     .then(() => console.log("Successfully deleted event from calendar."))

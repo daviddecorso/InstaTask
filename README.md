@@ -111,7 +111,7 @@ Lucas Rossell: Assisted with backend implementation of user story [005] and bega
 ### Task Allocation
 Moses Afrane:
 
-Ethan Beaupre:
+Ethan Beaupre: Created a few more user stories, began work on an about page for user story [017]. Worked on a logo for our site.
 
 David DeCorso: Worked on displaying calendar data  on frontend [005], worked on parsing calendar data [004].
 

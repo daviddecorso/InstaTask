@@ -106,7 +106,7 @@ Lucas Rossell: Assisted with backend implementation of user story [005] and bega
 - [Frontend Source Code](https://github.com/daviddecorso/InstaTask/tree/main/src)
 - [Backend Source Code](https://github.com/daviddecorso/InstaTask/tree/main/backend)
 - [Testing](https://github.com/daviddecorso/InstaTask/tree/main/backend/test)
-- Product Demonstration
+- [Product Demonstration](https://www.youtube.com/watch?v=uWvidNDiacw)
 
 ### Task Allocation
 Moses Afrane:

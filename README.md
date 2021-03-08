@@ -109,7 +109,7 @@ Lucas Rossell: Assisted with backend implementation of user story [005] and bega
 - [Product Demonstration](https://www.youtube.com/watch?v=uWvidNDiacw)
 
 ### Task Allocation
-Moses Afrane:
+Moses Afrane: Created UI components and worked on sending inputs to database for user story [006]. 
 
 Ethan Beaupre: Created a few more user stories, began work on an about page for user story [017]. Worked on a logo for our site.
 

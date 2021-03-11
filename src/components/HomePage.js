@@ -69,7 +69,7 @@ function HomePage({ user, setUser, events, setEvents }) {
         {!authenticated ? (
           <Login />
         ) : (
-          <TaskView events={events} setEvents={setEvents} />
+          <TaskView events={events} setEvents={setEvents} user={user} />
         )}
       </div>
     </div>

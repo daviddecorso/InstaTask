@@ -15,11 +15,22 @@ const localizer = dateFnsLocalizer({
 });
 
 function CalendarView({ events }) {
+  let newEventsArray = [];
+  for (let d in events) {
+    let eventObj = {
+      dtstart: new Date(events[d].dtstart),
+      dtend: new Date(events[d].dtend),
+      summary: events[d].summary,
+    };
+    newEventsArray.push(eventObj);
+  }
+  console.log(newEventsArray);
+
   return (
     <div>
       <Calendar
         localizer={localizer}
-        events={events}
+        events={newEventsArray}
         startAccessor="dtstart"
         endAccessor="dtend"
         titleAccessor="summary"

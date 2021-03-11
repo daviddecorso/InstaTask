@@ -24,7 +24,6 @@ function CalendarView({ events }) {
     };
     newEventsArray.push(eventObj);
   }
-  console.log(newEventsArray);
 
   return (
     <div>

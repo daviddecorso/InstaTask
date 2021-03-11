@@ -18,7 +18,15 @@ function trimSummary(summary) {
   }
 
   // Re-joins the array.
-  return summaryArr.join("");
+  let joinArr = summaryArr.join("");
+
+  // Remove trailing space if present
+  if (joinArr.charAt(joinArr.length - 1) == " ") {
+    const returnArr = joinArr.slice(0, -1);
+    joinArr = returnArr;
+  }
+
+  return joinArr;
 }
 
 module.exports = { trimSummary };

@@ -12,19 +12,17 @@ router.route("/:id").get((req, res) => {
 });
 
 router.route("/add").post((req, res) => {
-  const id = req.user._id;
-  const newEvent = req.event;
-  addCalendarEvent(id, newEvent)
-    .then(() => console.log("Successfully added event to calendar."))
-    .catch((err) => console.log("Error: " + err));
+  const id = req.body.uid;
+  const newEvent = req.body.event;
+  addCalendarEvent(id, newEvent).catch((err) => console.log("Error: " + err));
 });
 
 router.route("/delete").put((req, res) => {
   const id = req.user._id;
   const newEvent = req.event.uid;
-  deleteCalendarEvent(id, newEvent)
-    .then(() => console.log("Successfully deleted event from calendar."))
-    .catch((err) => console.log("Error: " + err));
+  deleteCalendarEvent(id, newEvent).catch((err) =>
+    console.log("Error: " + err)
+  );
 });
 
 router.route("/update").put((req, res) => {
@@ -39,6 +37,23 @@ router.route("/update").put((req, res) => {
   tempList
     .then((list) => updateCalendar(id, list))
     .catch((err) => res.status(400).json("Error: " + err));
+});
+
+router.route("/edit").put((req, res) => {
+  const uid = req.body.user._id;
+  const eid = req.body.event._id;
+  let userModel = require("../models/user.model.js");
+  userModel
+    .findByIdAndUpdate(
+      {
+        _id: uid,
+        "calendar.events": { $elemMatch: { _id: eid } },
+      },
+      { $set: { "calendar.events.$": req.body.event } },
+      { safe: true, upsert: false }
+    )
+    .then(() => console.log("Successfully deleted event from calendar."))
+    .catch((err) => console.log("Error: " + err));
 });
 
 module.exports = router;

@@ -27,8 +27,7 @@ function AddTask({ user }) {
     const newEvent = {
       uid: user._id,
       dtstamp: dateStamp,
-      dtstart: dateStamp,
-      dtend: selectedDate,
+      dtstart: selectedDate,
       desc: eventDescription.value,
       sequence: 0,
       summary: eventName.value,
@@ -37,7 +36,7 @@ function AddTask({ user }) {
 
     /* Sending to backend */
     axios.post("http://localhost:5000/events/add", {
-      user: user,
+      uid: user._id,
       event: newEvent,
     });
 

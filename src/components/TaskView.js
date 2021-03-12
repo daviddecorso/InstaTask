@@ -4,6 +4,7 @@ import { useMediaQuery } from "react-responsive";
 import Tabs from "./Tabs";
 import TaskCard from "./TaskCard";
 import CalendarView from "./CalendarView";
+import AddTask from "./addTask";
 
 function TaskView({ events, setEvents, user }) {
   // Determines if the view is mobile
@@ -101,6 +102,7 @@ function TaskView({ events, setEvents, user }) {
           </div>
         )}
       </div>
+      <AddTask user={user} />
     </div>
   );
 }

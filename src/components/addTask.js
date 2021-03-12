@@ -37,7 +37,7 @@ function AddTask({ user }) {
       dtend: selectedDate,
     };
 
-  
+
     /* Sending to backend */
     axios.post("http://localhost:5000/events/add", {
       uid: user._id,

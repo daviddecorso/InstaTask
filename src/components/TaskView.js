@@ -113,5 +113,4 @@ function TaskView({ events, setEvents, user }) {
   );
 }
 
-
 export default TaskView;

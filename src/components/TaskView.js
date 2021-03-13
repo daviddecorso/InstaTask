@@ -93,12 +93,12 @@ function TaskView({ events, setEvents, user }) {
                   <TaskCard event={event} zoomFilter={zoomFilter} user={user} />
                 </div>
               ))}
-              <div
-                id="column"
-                className="column"
-                style={{ marginLeft: 250, marginRight: 250 }}
-              >
-                <AddTask user={user} />
+            </div>
+            <div className="section">
+              <div className="level">
+                <div className="level-item">
+                  <AddTask user={user} />
+                </div>
               </div>
             </div>
           </div>

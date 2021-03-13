@@ -94,6 +94,13 @@ function TaskView({ events, setEvents, user }) {
                 </div>
               ))}
             </div>
+            <div className="section">
+              <div className="level">
+                <div className="level-item">
+                  <AddTask user={user} />
+                </div>
+              </div>
+            </div>
           </div>
         )}
         {calView && (
@@ -102,40 +109,8 @@ function TaskView({ events, setEvents, user }) {
           </div>
         )}
       </div>
-      <AddTask user={user} />
     </div>
   );
 }
-
-/* 
-TEST DATA:
-*/
-const testEvent1 = {
-  DTSTAMP: "20201113T183400Z",
-  UID: "event-assignment-6864826",
-  DTSTART: "20210206T000000",
-  DTEND: "20210206T000000",
-  CLASS: "PUBLIC",
-  DESCRIPTION:
-    "For the upcoming sprint deadline, please have the following items available on your GitHub site:\n\n* Vision Statement [7 points]\n\n",
-  SEQUENCE: 0,
-  SUMMARY: "Sprint #1 [COP4331C_CMB-21Spring 00038]",
-  URL:
-    "https://webcourses.ucf.edu/calendar?include_contexts=course_1369388&month=02&year=2021#assignment_6864826",
-};
-
-const testEvent2 = {
-  DTSTAMP: "20210110T190300Z",
-  UID: "event-assignment-6864815",
-  DTSTART: "20210206T000000",
-  DTEND: "20210206T000000",
-  CLASS: "PUBLIC",
-  SEQUENCE: 0,
-  SUMMARY: "Weekly Quiz 3 [COP4331C_CMB-21Spring 00038]",
-  URL:
-    "https://webcourses.ucf.edu/calendar?include_contexts=course_1369388&month=02&year=2021#assignment_6864815",
-};
-
-const testEvents = [testEvent1, testEvent2];
 
 export default TaskView;

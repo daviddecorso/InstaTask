@@ -20,6 +20,8 @@ function TaskView({ events, setEvents, user }) {
   // Tracks if zoom events should be filtered from task view
   const [zoomFilter, setZoomFilter] = useState(true);
 
+  const [calEvents, setCalEvents] = useState(events);
+
   const cardContainerHeight = isMobile ? window.innerHeight - 200 : "700px";
 
   const cardContainerStyle = {
@@ -105,7 +107,11 @@ function TaskView({ events, setEvents, user }) {
         )}
         {calView && (
           <div id="column" className="column">
-            <CalendarView events={events} />
+            <CalendarView
+              events={events}
+              calEvents={calEvents}
+              setCalEvents={setCalEvents}
+            />
           </div>
         )}
       </div>

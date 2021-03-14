@@ -41,7 +41,6 @@ function HomePage({ user, setUser, events, setEvents }) {
         axios
           .get("http://localhost:5000/events/" + responseJson.user._id)
           .then((res) => {
-            console.log(res);
             setEvents(res.data);
           });
       })
@@ -57,9 +56,9 @@ function HomePage({ user, setUser, events, setEvents }) {
 
       {/* Displays import modal */}
       {displayImport && (
-        <div class="modal is-active">
-          <div class="modal-background"></div>
-          <div class="modal-content">
+        <div className="modal is-active">
+          <div className="modal-background"></div>
+          <div className="modal-content">
             <Import user={user} setImport={setImport} />
           </div>
         </div>

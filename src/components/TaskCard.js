@@ -5,6 +5,7 @@
 import React, { useState } from "react";
 import format from "date-fns/format";
 import { isAfter } from "date-fns/esm";
+import { IconSquare, IconSquareCheck, IconChevronDown } from "@tabler/icons";
 
 // Style for task cards
 const cardButtonStyle = {
@@ -58,44 +59,15 @@ function TaskCard({ event, zoomFilter, user }) {
             <header className="card-header">
               <p className="card-header-title">
                 <span
-                  class="icon"
+                  className="icon"
                   style={{ marginRight: "10px", cursor: "pointer" }}
                   onClick={completeTask}
                 >
                   {!completedTask && (
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="icon icon-tabler icon-tabler-square"
-                      width="44"
-                      height="44"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="#ffffff"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                      <rect x="4" y="4" width="16" height="16" rx="2" />
-                    </svg>
+                    <IconSquare size={44} color="white" stroke={1.5} />
                   )}{" "}
                   {completedTask && (
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="icon icon-tabler icon-tabler-square-check"
-                      width="44"
-                      height="44"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="#ffffff"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                      <rect x="4" y="4" width="16" height="16" rx="2" />
-                      <path d="M9 12l2 2l4 -4" />
-                    </svg>
+                    <IconSquareCheck size={44} color="white" stroke={1.5} />
                   )}
                 </span>
                 <a href={event.url} style={cardTextStyle}>
@@ -111,21 +83,7 @@ function TaskCard({ event, zoomFilter, user }) {
                 aria-label="more options"
               >
                 <span className="icon">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="icon icon-tabler icon-tabler-chevron-down"
-                    width="28"
-                    height="28"
-                    viewBox="0 0 24 24"
-                    strokeWidth="1.5"
-                    stroke="#ffffff"
-                    fill="none"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <polyline points="6 9 12 15 18 9" />
-                  </svg>
+                  <IconChevronDown size={28} color="white" stroke={1.5} />
                 </span>
               </button>
             </header>

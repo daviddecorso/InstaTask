@@ -4,6 +4,7 @@
 
 import React, { useState } from "react";
 import format from "date-fns/format";
+import { isAfter } from "date-fns/esm";
 
 // Style for task cards
 const cardButtonStyle = {
@@ -40,107 +41,114 @@ function TaskCard({ event, zoomFilter, user }) {
     };
   };
 
+  const checkDate = () => {
+    const yesterday = new Date(Date.now() - 864e5);
+    return isAfter(new Date(event.dtstart), yesterday);
+  };
+
   return (
-    <div>
+    <>
       {/*
        * Returns empty div if card should be filtered. (If a
        * card is a zoom meeting and the zoom filter is active.)
        */}
-      {!(event.isZoom && zoomFilter) && (
-        <div className="card">
-          <header className="card-header">
-            <p className="card-header-title">
-              <span
-                class="icon"
-                style={{ marginRight: "10px", cursor: "pointer" }}
-                onClick={completeTask}
-              >
-                {!completedTask && (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="icon icon-tabler icon-tabler-square"
-                    width="44"
-                    height="44"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="#ffffff"
-                    fill="none"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <rect x="4" y="4" width="16" height="16" rx="2" />
-                  </svg>
-                )}{" "}
-                {completedTask && (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="icon icon-tabler icon-tabler-square-check"
-                    width="44"
-                    height="44"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="#ffffff"
-                    fill="none"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <rect x="4" y="4" width="16" height="16" rx="2" />
-                    <path d="M9 12l2 2l4 -4" />
-                  </svg>
-                )}
-              </span>
-              <a href={event.url} style={cardTextStyle}>
-                [{event.course}] {event.summary} -{" "}
-                {format(new Date(event.dtstart), "eeee MMM d, h:mm aaa")}
-              </a>
-            </p>
-            <button
-              onClick={expandCard}
-              id="card-button"
-              className="card-header-icon"
-              style={cardButtonStyle}
-              aria-label="more options"
-            >
-              <span className="icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="icon icon-tabler icon-tabler-chevron-down"
-                  width="28"
-                  height="28"
-                  viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke="#ffffff"
-                  fill="none"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
+      {!(event.isZoom && zoomFilter) && checkDate() && (
+        <div className="block">
+          <div className="card">
+            <header className="card-header">
+              <p className="card-header-title">
+                <span
+                  class="icon"
+                  style={{ marginRight: "10px", cursor: "pointer" }}
+                  onClick={completeTask}
                 >
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <polyline points="6 9 12 15 18 9" />
-                </svg>
-              </span>
-            </button>
-          </header>
-          {/* Only displays detail if toggleDetail is set to true. */}
-          {toggleDetail && (
-            <>
-              <div className="card-content">
-                <div className="content">{event.desc}</div>
-              </div>
-              <footer className="card-footer">
-                <a href="#" className="card-footer-item">
-                  Edit
+                  {!completedTask && (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="icon icon-tabler icon-tabler-square"
+                      width="44"
+                      height="44"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="#ffffff"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                    </svg>
+                  )}{" "}
+                  {completedTask && (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="icon icon-tabler icon-tabler-square-check"
+                      width="44"
+                      height="44"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="#ffffff"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M9 12l2 2l4 -4" />
+                    </svg>
+                  )}
+                </span>
+                <a href={event.url} style={cardTextStyle}>
+                  [{event.course}] {event.summary} -{" "}
+                  {format(new Date(event.dtstart), "eeee MMM d, h:mm aaa")}
                 </a>
-                <a href="#" className="card-footer-item">
-                  Done
-                </a>
-              </footer>
-            </>
-          )}
+              </p>
+              <button
+                onClick={expandCard}
+                id="card-button"
+                className="card-header-icon"
+                style={cardButtonStyle}
+                aria-label="more options"
+              >
+                <span className="icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="icon icon-tabler icon-tabler-chevron-down"
+                    width="28"
+                    height="28"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="#ffffff"
+                    fill="none"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                </span>
+              </button>
+            </header>
+            {/* Only displays detail if toggleDetail is set to true. */}
+            {toggleDetail && (
+              <>
+                <div className="card-content">
+                  <div className="content">{event.desc}</div>
+                </div>
+                <footer className="card-footer">
+                  <a href="#" className="card-footer-item">
+                    Edit
+                  </a>
+                  <a href="#" className="card-footer-item">
+                    Done
+                  </a>
+                </footer>
+              </>
+            )}
+          </div>
         </div>
       )}
-    </div>
+    </>
   );
 }
 

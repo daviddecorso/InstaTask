@@ -91,9 +91,12 @@ function TaskView({ events, setEvents, user }) {
             <div style={cardContainerStyle}>
               {/* Displays a list of tasks */}
               {events.map((event) => (
-                <div className="block" key={event.uid}>
-                  <TaskCard event={event} zoomFilter={zoomFilter} user={user} />
-                </div>
+                <TaskCard
+                  event={event}
+                  zoomFilter={zoomFilter}
+                  user={user}
+                  key={event._id}
+                />
               ))}
             </div>
             <div className="section">

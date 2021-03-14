@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import DateTimePicker from "react-datetime-picker";
 import axios from "axios";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function AddTask({ user }) {
   // Style for Add Task Button
@@ -13,8 +13,9 @@ function AddTask({ user }) {
     color: "white",
     marginTop: 20,
   };
-  toast.configure()
-  const success = () => toast.info("Successfuly Added Event: " + eventName.value)
+  toast.configure();
+  const success = () =>
+    toast.info("Successfuly Added Event: " + eventName.value);
 
   let maxDate = new Date(2022, 12, 30);
   const dateStamp = Date();
@@ -36,7 +37,6 @@ function AddTask({ user }) {
       complete: false,
       dtend: selectedDate,
     };
-
 
     /* Sending to backend */
     axios.post("http://localhost:5000/events/add", {
@@ -65,22 +65,26 @@ function AddTask({ user }) {
 
   return (
     <div>
-      <div class="has-text-centered">
-        <button onClick={onClick} class="button is-primary" id="addTask">
+      <div className="has-text-centered">
+        <button onClick={onClick} className="button is-primary" id="addTask">
           Add Task
         </button>
       </div>
-      <div class="modal" className="modal" id="modal">
-        <div class="modal-background" id="modalbg" onClick={onClickExit}></div>
-        <div class="modal-card ">
+      <div className="modal" className="modal" id="modal">
+        <div
+          className="modal-background"
+          id="modalbg"
+          onClick={onClickExit}
+        ></div>
+        <div className="modal-card ">
           <header
-            class="modal-card-head"
+            className="modal-card-head"
             style={{ backgroundColor: "transparent", outline: "none" }}
           >
-            <h3 class="title mb-6">
+            <h3 className="title mb-6">
               New Event Information
               <button
-                class="delete is-large"
+                className="delete is-large"
                 aria-label="close"
                 onClick={onClickExit}
                 style={{ marginLeft: 225 }}
@@ -88,33 +92,33 @@ function AddTask({ user }) {
             </h3>
           </header>
           <section
-            class="modal-card-body"
+            className="modal-card-body"
             style={{ backgroundColor: "transparent" }}
           >
             <form>
-              <div class="field is-small">
-                <label class="label"> Event Name</label>
-                <div class="control " id="eventnamecontrol">
+              <div className="field is-small">
+                <label className="label"> Event Name</label>
+                <div className="control " id="eventnamecontrol">
                   <input
-                    class="input is-secondary "
+                    className="input is-secondary "
                     type="text"
                     placeholder="event name"
                     id="eventname"
                     style={{ color: "black" }}
                   />
                 </div>
-                <p class="helpName"> </p>
+                <p className="helpName"> </p>
               </div>
             </form>
             <form style={{ marginTop: 20 }}>
-              <div class="field">
-                <label class="label "> Event Description</label>
+              <div className="field">
+                <label className="label "> Event Description</label>
                 <div
-                  class="control has-icons-left"
+                  className="control has-icons-left"
                   id="eventdescriptioncontrol"
                 >
                   <textarea
-                    class="textarea"
+                    className="textarea"
                     type="text"
                     placeholder="Event Description"
                     id="eventdescription"
@@ -124,18 +128,17 @@ function AddTask({ user }) {
               </div>
             </form>
             <form style={{ color: "black" }}>
-              <div class="field" style={{ marginTop: 20 }}>
-                <label class="label"> Event Date</label>
+              <div className="field" style={{ marginTop: 20 }}>
+                <label className="label"> Event Date</label>
                 <form>
                   <section
-                    class="field is-rounded"
+                    className="field is-rounded"
                     style={{ backgroundColor: "white", width: "238px" }}
-                    has-backgroundColor
                   >
                     <DateTimePicker
                       id="datetimepicker"
-                      disableClock="true"
-                      disableCalendar="true"
+                      disableClock={true}
+                      disableCalendar={true}
                       yearPlaceholder="yyyy"
                       monthPlaceholder="mm"
                       dayPlaceholder="dd"
@@ -151,16 +154,15 @@ function AddTask({ user }) {
             </form>
           </section>
           <footer
-            class="modal-card-footer"
+            className="modal-card-footer"
             style={{ backgroundColor: "transparent" }}
           >
-            <form class="md-12" onSubmit={handleSubmit}>
-              <button
-                type="submit"
-                class="button is-primary"
-                id="submit"
-                style={{ marginTop: 20, marginLeft: 280, marginRight: 280 }}
-              >
+            <form
+              className="md-12"
+              onSubmit={handleSubmit}
+              style={{ textAlignLast: "center" }}
+            >
+              <button type="submit" className="button is-primary" id="submit">
                 Submit
               </button>
             </form>

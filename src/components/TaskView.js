@@ -5,6 +5,7 @@ import Tabs from "./Tabs";
 import TaskCard from "./TaskCard";
 import CalendarView from "./CalendarView";
 import AddTask from "./addTask";
+import { IconFilter } from "@tabler/icons";
 
 function TaskView({ events, setEvents, user }) {
   // Determines if the view is mobile
@@ -20,7 +21,9 @@ function TaskView({ events, setEvents, user }) {
   // Tracks if zoom events should be filtered from task view
   const [zoomFilter, setZoomFilter] = useState(true);
 
-  const cardContainerHeight = isMobile ? window.innerHeight - 200 : "700px";
+  const [calEvents, setCalEvents] = useState(events);
+
+  const cardContainerHeight = isMobile ? window.innerHeight - 280 : "700px";
 
   const cardContainerStyle = {
     height: cardContainerHeight,
@@ -68,33 +71,25 @@ function TaskView({ events, setEvents, user }) {
               >
                 <span>Filter</span>
                 <span className="icon is-small">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="icon icon-tabler icon-tabler-filter"
-                    width="28"
-                    height="28"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.25"
-                    stroke="#000000"
-                    fill="none"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <path d="M5.5 5h13a1 1 0 0 1 .5 1.5l-5 5.5l0 7l-4 -3l0 -4l-5 -5.5a1 1 0 0 1 .5 -1.5" />
-                  </svg>
+                  <IconFilter color="black" size={28} stroke={1.25} />
                 </span>
               </button>
             </div>
             <div style={cardContainerStyle}>
               {/* Displays a list of tasks */}
               {events.map((event) => (
-                <div className="block" key={event.uid}>
-                  <TaskCard event={event} zoomFilter={zoomFilter} user={user} />
-                </div>
+                <TaskCard
+                  event={event}
+                  zoomFilter={zoomFilter}
+                  user={user}
+                  key={event._id}
+                />
               ))}
             </div>
-            <div className="section">
+            <div
+              className="section"
+              style={{ paddingTop: "1.5rem", paddingBottom: "1.5rem" }}
+            >
               <div className="level">
                 <div className="level-item">
                   <AddTask user={user} />
@@ -105,7 +100,11 @@ function TaskView({ events, setEvents, user }) {
         )}
         {calView && (
           <div id="column" className="column">
-            <CalendarView events={events} />
+            <CalendarView
+              events={events}
+              calEvents={calEvents}
+              setCalEvents={setCalEvents}
+            />
           </div>
         )}
       </div>

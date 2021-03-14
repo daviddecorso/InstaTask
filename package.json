@@ -4,6 +4,7 @@
   "private": true,
   "main": "sass/mystyles.scss",
   "dependencies": {
+    "@tabler/icons": "^1.39.1",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.3",
     "@testing-library/user-event": "^12.6.2",

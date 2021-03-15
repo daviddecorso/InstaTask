@@ -30,7 +30,7 @@ Ethan Beaupre: Requirements, dev environment setup.
 
 David DeCorso: App framework, database setup, dev environment setup.
 
-Sean Kemp: database help, unit test dev, dev environment setup
+Sean Kemp: database help, unit test dev, dev environment setup.
 
 Lucas Rossell: Database + backend plan & setup, dev environment setup.
 
@@ -45,13 +45,13 @@ Lucas Rossell: Database + backend plan & setup, dev environment setup.
 - [Product Demonstration](https://www.youtube.com/watch?v=GIDPLIaiHyg)
 
 ### Task Allocation
-Moses Afrane: Helped with creation of diagrams
+Moses Afrane: Helped with creation of diagrams.
 
-Ethan Beaupre: Helped with acrhitecture diagrams, began work on requirements for user story [001]
+Ethan Beaupre: Helped with acrhitecture diagrams, began work on requirements for user story [001].
 
-David DeCorso: Helped with architecture documents, created frontend UI for taskview page
+David DeCorso: Helped with architecture documents, created frontend UI for taskview page.
 
-Sean Kemp: helped create architecture documents
+Sean Kemp: helped create architecture documents.
 
 Lucas Rossell: Began work on database requirements for user story [001]. Assisted with creating system architecture documents + supporting charts.
 
@@ -67,9 +67,9 @@ Lucas Rossell: Began work on database requirements for user story [001]. Assiste
 - [Product Demonstration](https://youtu.be/fcH76En2lBc)
 
 ### Task Allocation
-Moses Afrane: Updated requirements with acceptance tests/requirements
+Moses Afrane: Updated requirements with acceptance tests/requirements.
 
-Ethan Beaupre: Continued work on user story [003], updated our UI diagram, wrote manual tests
+Ethan Beaupre: Continued work on user story [003], updated our UI diagram, wrote manual tests.
 
 David DeCorso: Added functionality to task cards, created mobile web view, wrote URL and date parsing functions, wrote automated tests.
 
@@ -88,13 +88,13 @@ Lucas Rossell: Contributed code for user story [003] as well as some supportive 
 - [Product Demonstration](https://www.youtube.com/watch?v=pcugv01aiZk)
 
 ### Task Allocation
-Moses Afrane: Began work on task creation (user story [006])
+Moses Afrane: Began work on task creation (user story [006]).
 
-Ethan Beaupre: Created login page for user story [005], finished .ics link validation on import for user story [003]
+Ethan Beaupre: Created login page for user story [005], finished .ics link validation on import for user story [003].
 
-David DeCorso: Created account creation/login system (user story [005])
+David DeCorso: Created account creation/login system (user story [005]).
 
-Sean Kemp: Helped create documents for sprint
+Sean Kemp: Helped create documents for sprint.
 
 Lucas Rossell: Assisted with backend implementation of user story [005] and began work on stories [004] and [006].
 
@@ -115,11 +115,11 @@ Ethan Beaupre: Created a few more user stories, began work on an about page for 
 
 David DeCorso: Worked on displaying calendar data  on frontend [005], worked on parsing calendar data [004].
 
-Sean Kemp: created some user stories and began work on tutorial page for frontend [013],
+Sean Kemp: created some user stories and began work on tutorial page for frontend [013].
 
 Lucas Rossell: Finished backend process for storing user calendar in the database, as well as a number of supporting functions for interacting with the calendar. This contributed towards user stories [004], [005], and [006].
 
-# Sprint 5
+# Sprint 6
 - [Trello Board](https://trello.com/b/4OQlQMk6/instatask)
 - [Burndown Chart](https://cdn.discordapp.com/attachments/800004461979893785/820843264595984424/unknown.png)
 - [Velocity Chart](https://cdn.discordapp.com/attachments/800004461979893785/820843347681476649/unknown.png)
@@ -130,9 +130,9 @@ Lucas Rossell: Finished backend process for storing user calendar in the databas
 - Product Demonstration
 
 ### Task Allocation
-Moses Afrane: Completed addTask function, fixed UI elements and created test for user story [006]
+Moses Afrane: Completed addTask function, fixed UI elements and created test for user story [006].
 
-Ethan Beaupre: 
+Ethan Beaupre: Completed the basic layout for the about page for user story [014], created login and about page manual tests.
 
 David DeCorso: 
 

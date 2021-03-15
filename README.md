@@ -127,14 +127,14 @@ Lucas Rossell: Finished backend process for storing user calendar in the databas
 - [Frontend Source Code](https://github.com/daviddecorso/InstaTask/tree/main/src)
 - [Backend Source Code](https://github.com/daviddecorso/InstaTask/tree/main/backend)
 - [Testing](https://github.com/daviddecorso/InstaTask/tree/main/backend/test)
-- Product Demonstration
+- [Product Demonstration](https://www.youtube.com/watch?v=hsZEgZHgr0w)
 
 ### Task Allocation
 Moses Afrane: Completed addTask function, fixed UI elements and created test for user story [006].
 
 Ethan Beaupre: Completed the basic layout for the about page for user story [014], created login and about page manual tests.
 
-David DeCorso: 
+David DeCorso: Did zoom filtering [017], worked on marking tasks as done on the frontend [007], and some bug fixing.
 
 Sean Kemp: added text for about and tutorial pages, and added testing requirement for tutorial user story.
 

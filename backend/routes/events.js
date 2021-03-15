@@ -2,6 +2,8 @@ const router = require("express").Router();
 let userModel = require("../models/user.model.js");
 const { addCalendarEvent } = require("../src/addCalendarEvent.js");
 const { deleteCalendarEvent } = require("../src/deleteCalendarEvent.js");
+const { toggleHidden } = require("../src/toggleHidden.js");
+const { toggleComplete } = require("../src/toggleComplete.js");
 const { updateCalendar } = require("../src/updateCalendar.js");
 
 router.route("/:id").get((req, res) => {
@@ -39,21 +41,19 @@ router.route("/update").put((req, res) => {
     .catch((err) => res.status(400).json("Error: " + err));
 });
 
-router.route("/edit").put((req, res) => {
-  const uid = req.body.user._id;
-  const eid = req.body.event._id;
-  let userModel = require("../models/user.model.js");
-  userModel
-    .findByIdAndUpdate(
-      {
-        _id: uid,
-        "calendar.events": { $elemMatch: { _id: eid } },
-      },
-      { $set: { "calendar.events.$": req.body.event } },
-      { safe: true, upsert: false }
-    )
-    .then(() => console.log("Successfully deleted event from calendar."))
+router.route("/toggleHidden").put((req, res) => {
+  const uid = req.body.uid;
+  const eid = req.body.eid;
+  toggleHidden(uid, eid)
+    .then(() => res.json("Success"))
     .catch((err) => console.log("Error: " + err));
 });
 
+router.route("/toggleComplete").put((req, res) => {
+  const uid = req.body.uid;
+  const eid = req.body.eid;
+  toggleComplete(uid, eid)
+    .then(() => res.json("Success"))
+    .catch((err) => console.log("Error: " + err));
+});
 module.exports = router;

@@ -35,3 +35,11 @@
 | 1.  | Follow the login steps                | The home page should display                    |
 | 2.  | Click today's date on the calendar    | The calendar should go to today's daily view    |
 | 3.  | Click tomorrow's date on the calendar | The calendar should go to tomorrow's daily view |
+
+**Add Task Test**
+| No. | Steps to Reproduce                    | Expected Behavior                                              |
+|-----|---------------------------------------|----------------------------------------------------------------|
+| 1.  | Follow the login steps                | The home page should display                                   |
+| 2.  | Click Add Task button                 | A modal with new task fields to fill out will display          |
+| 3.  | Fill in the modal fields              | Modal fields should update to reflect changes                  |
+| 4.  | Click the submit button               | Successfully added task notification should display            |

@@ -130,7 +130,7 @@ Lucas Rossell: Finished backend process for storing user calendar in the databas
 - Product Demonstration
 
 ### Task Allocation
-Moses Afrane: 
+Moses Afrane: Completed addTask function, fixed UI elements and created test for user story [006]
 
 Ethan Beaupre: 
 

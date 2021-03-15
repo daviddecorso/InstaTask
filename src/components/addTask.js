@@ -31,6 +31,7 @@ function AddTask({ user }) {
       uid: user._id,
       dtstamp: dateStamp,
       dtstart: selectedDate,
+      dtend: selectedDate,
       desc: eventDescription.value,
       sequence: 0,
       summary: eventName.value,

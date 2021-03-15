@@ -3,6 +3,7 @@ let userModel = require("../models/user.model.js");
 const { addCalendarEvent } = require("../src/addCalendarEvent.js");
 const { deleteCalendarEvent } = require("../src/deleteCalendarEvent.js");
 const { toggleHidden } = require("../src/toggleHidden.js");
+const { editCalendarEvent } = require("../src/editCalendarEvent.js");
 const { toggleComplete } = require("../src/toggleComplete.js");
 const { updateCalendar } = require("../src/updateCalendar.js");
 
@@ -20,11 +21,9 @@ router.route("/add").post((req, res) => {
 });
 
 router.route("/delete").put((req, res) => {
-  const id = req.user._id;
-  const newEvent = req.event.uid;
-  deleteCalendarEvent(id, newEvent).catch((err) =>
-    console.log("Error: " + err)
-  );
+  const id = req.body.uid;
+  const eid = req.body.eid;
+  deleteCalendarEvent(id, eid).catch((err) => console.log("Error: " + err));
 });
 
 router.route("/update").put((req, res) => {
@@ -53,6 +52,15 @@ router.route("/toggleComplete").put((req, res) => {
   const uid = req.body.uid;
   const eid = req.body.eid;
   toggleComplete(uid, eid)
+    .then(() => res.json("Success"))
+    .catch((err) => console.log("Error: " + err));
+});
+
+router.route("/edit").put((req, res) => {
+  const uid = req.body.uid;
+  const eid = req.body.eid;
+  const newEvent = req.body.newEvent;
+  editCalendarEvent(uid, eid, newEvent)
     .then(() => res.json("Success"))
     .catch((err) => console.log("Error: " + err));
 });

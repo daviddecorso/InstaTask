@@ -136,6 +136,6 @@ Ethan Beaupre:
 
 David DeCorso: 
 
-Sean Kemp: 
+Sean Kemp: added text for about and tutorial pages, and added testing requirement for tutorial user story.
 
 Lucas Rossell: Helped out with finishing user story [006] and finished the backend implementation for user story [007].

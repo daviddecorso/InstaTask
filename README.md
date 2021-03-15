@@ -118,3 +118,24 @@ David DeCorso: Worked on displaying calendar data  on frontend [005], worked on 
 Sean Kemp: created some user stories and began work on tutorial page for frontend [013],
 
 Lucas Rossell: Finished backend process for storing user calendar in the database, as well as a number of supporting functions for interacting with the calendar. This contributed towards user stories [004], [005], and [006].
+
+# Sprint 5
+- [Trello Board](https://trello.com/b/4OQlQMk6/instatask)
+- [Burndown Chart](https://cdn.discordapp.com/attachments/800004461979893785/820843264595984424/unknown.png)
+- [Velocity Chart](https://cdn.discordapp.com/attachments/800004461979893785/820843347681476649/unknown.png)
+- [System Architecture](https://github.com/daviddecorso/InstaTask/blob/main/artifacts/architecture.md)
+- [Frontend Source Code](https://github.com/daviddecorso/InstaTask/tree/main/src)
+- [Backend Source Code](https://github.com/daviddecorso/InstaTask/tree/main/backend)
+- [Testing](https://github.com/daviddecorso/InstaTask/tree/main/backend/test)
+- Product Demonstration
+
+### Task Allocation
+Moses Afrane: 
+
+Ethan Beaupre: 
+
+David DeCorso: 
+
+Sean Kemp: 
+
+Lucas Rossell: Helped out with finishing user story [006] and finished the backend implementation for user story [007].

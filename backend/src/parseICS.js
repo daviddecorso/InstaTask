@@ -1,4 +1,8 @@
+const ical = require("node-ical");
 const { getCourse } = require("./getCourse");
+const { canvasUrlToLink } = require("../src/canvasUrlToLink");
+const { trimSummary } = require("../src/trimSummary");
+const { determineIfZoom } = require("../src/determineIfZoom");
 
 /**
  * Takes the URL canvas provides for the user calendar
@@ -8,11 +12,6 @@ const { getCourse } = require("./getCourse");
  * @param {String} link
  */
 async function parseICS(link) {
-  const ical = require("node-ical");
-  const { canvasUrlToLink } = require("../src/canvasUrlToLink");
-  const { trimSummary } = require("../src/trimSummary");
-  const { determineIfZoom } = require("../src/determineIfZoom");
-
   var eventList = [];
   let events = await ical.async.fromURL(link);
   for (let d in events) {

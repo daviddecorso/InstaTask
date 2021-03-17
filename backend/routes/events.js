@@ -10,20 +10,24 @@ const { updateCalendar } = require("../src/updateCalendar.js");
 router.route("/:id").get((req, res) => {
   userModel
     .findById(req.params.id)
-    .then((user) => res.json(user.calendar.events))
+    .then((user) => res.status(200).json(user.calendar.events))
     .catch((err) => res.status(400).json("Error: " + err));
 });
 
 router.route("/add").post((req, res) => {
   const id = req.body.uid;
   const newEvent = req.body.event;
-  addCalendarEvent(id, newEvent).catch((err) => console.log("Error: " + err));
+  addCalendarEvent(id, newEvent)
+    .then(() => res.status(200).json("Successfully added event"))
+    .catch((err) => res.status(400).json("Error: " + err));
 });
 
 router.route("/delete").put((req, res) => {
   const id = req.body.uid;
   const eid = req.body.eid;
-  deleteCalendarEvent(id, eid).catch((err) => console.log("Error: " + err));
+  deleteCalendarEvent(id, eid)
+    .then(() => res.status(200).json("Successfully deleted event"))
+    .catch((err) => res.status(400).json("Error: " + err));
 });
 
 router.route("/update").put((req, res) => {
@@ -37,6 +41,7 @@ router.route("/update").put((req, res) => {
   let tempList = eventList();
   tempList
     .then((list) => updateCalendar(id, list))
+    .then(() => res.status(200).json("Successfully updated calendar"))
     .catch((err) => res.status(400).json("Error: " + err));
 });
 
@@ -44,16 +49,16 @@ router.route("/toggleHidden").put((req, res) => {
   const uid = req.body.uid;
   const eid = req.body.eid;
   toggleHidden(uid, eid)
-    .then(() => res.json("Success"))
-    .catch((err) => console.log("Error: " + err));
+    .then(() => res.status(200).json("Successfully toggled hidden"))
+    .catch((err) => res.status(400).json("Error: " + err));
 });
 
 router.route("/toggleComplete").put((req, res) => {
   const uid = req.body.uid;
   const eid = req.body.eid;
   toggleComplete(uid, eid)
-    .then(() => res.json("Success"))
-    .catch((err) => console.log("Error: " + err));
+    .then(() => res.status(200).json("Successfully toggled complete"))
+    .catch((err) => res.status(400).json("Error: " + err));
 });
 
 router.route("/edit").put((req, res) => {
@@ -61,7 +66,7 @@ router.route("/edit").put((req, res) => {
   const eid = req.body.eid;
   const newEvent = req.body.newEvent;
   editCalendarEvent(uid, eid, newEvent)
-    .then(() => res.json("Success"))
-    .catch((err) => console.log("Error: " + err));
+    .then(() => res.status(200).json("Successfully edited event"))
+    .catch((err) => res.status(400).json("Error: " + err));
 });
 module.exports = router;

@@ -22,7 +22,7 @@ router.route("/add").post((req, res) => {
 
   newUser
     .save()
-    .then(() => res.json("User added!"))
+    .then(() => res.status(200).json("User added!"))
     .catch((err) => res.status(400).json("Error: " + err));
 });
 
@@ -41,6 +41,9 @@ router.route("/update/calendar").put((req, res) => {
       res.status(200).json("Successfully updated link");
       tempList
         .then((list) => updateCalendar(id, list))
+        .then((res) =>
+          res.status(200).json("Successfully updated calendar link")
+        )
         .catch((err) => res.status(400).json("Error: " + err));
     })
     .catch((err) => res.status(400).json("Error: " + err));

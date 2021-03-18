@@ -6,6 +6,8 @@ import React, { useState } from "react";
 import format from "date-fns/format";
 import { isAfter } from "date-fns/esm";
 import { IconSquare, IconSquareCheck, IconChevronDown } from "@tabler/icons";
+import axios from "axios";
+import { toast } from "react-toastify";
 
 // Style for task cards
 const cardButtonStyle = {
@@ -26,6 +28,12 @@ function TaskCard({ event, zoomFilter, user }) {
     textDecoration: completedTask ? "line-through" : "none",
   };
 
+  // Notifications
+  toast.configure();
+  const successNotif = () => toast.info("Successfuly Deleted Event.");
+  const errorNotif = () => {
+    toast.error("There was an error deleting the event.");
+  };
   // Expands/collapses task cards
   const expandCard = () => {
     setToggle(!toggleDetail);
@@ -40,6 +48,24 @@ function TaskCard({ event, zoomFilter, user }) {
       eventId: event._id,
       complete: true,
     };
+  };
+
+  const deleteTask = () => {
+    const result = window.confirm("Are you sure you want to delete this task?");
+    console.log(result);
+    if (result === true) {
+      axios
+        .put("http://localhost:5000/events/delete", {
+          uid: user._id,
+          eid: event._id,
+        })
+        .then((res) => {
+          successNotif();
+        })
+        .catch((res) => {
+          errorNotif();
+        });
+    }
   };
 
   const checkDate = () => {
@@ -97,8 +123,8 @@ function TaskCard({ event, zoomFilter, user }) {
                   <a href="#" className="card-footer-item">
                     Edit
                   </a>
-                  <a href="#" className="card-footer-item">
-                    Done
+                  <a onClick={deleteTask} className="card-footer-item">
+                    Delete
                   </a>
                 </footer>
               </>

@@ -15,17 +15,20 @@ function AddTask({ user }) {
   };
   toast.configure();
   const success = () =>
-    toast.info("Successfuly Added Event: " + eventName.value);
+    toast.info("Successfuly Added Task: " + eventName.value);
+  const failure = () => toast.error("Failed to Add Task " + eventName.value);
 
-  let maxDate = new Date(2022, 12, 30);
-  const dateStamp = Date();
+  // Create DateStamp, maxDate is set to 3 years after current date
+  const dateStamp = new Date();
+  var year = dateStamp.getFullYear();
+  var month = dateStamp.getMonth();
+  var day = dateStamp.getDay();
+  let maxDate = new Date(year + 3, month, day);
 
-  const [submitting, setSubmitting] = useState(false);
   const [selectedDate, setSelectedDate] = useState(dateStamp);
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setSubmitting(true);
 
     const newEvent = {
       uid: user._id,
@@ -39,14 +42,25 @@ function AddTask({ user }) {
       dtend: selectedDate,
     };
 
-    /* Sending to backend */
-    axios.post("http://localhost:5000/events/add", {
-      uid: user._id,
-      event: newEvent,
-    });
-
-    // Sends Toast
-    success();
+    // Invalidate event if user only entered spaces
+    newEvent.desc = newEvent.desc.trim();
+    newEvent.summary = newEvent.summary.trim();
+    if (newEvent.desc != "" && newEvent.summary != "") {
+      /* Sending to backend */
+      axios
+        .post("http://localhost:5000/events/add", {
+          uid: user._id,
+          event: newEvent,
+        })
+        .then((res) => {
+          success();
+        })
+        .catch((res) => {
+          failure();
+        });
+    } else {
+      failure();
+    }
 
     // close modal after handling submit
     modal.classList.remove("is-active");
@@ -67,7 +81,7 @@ function AddTask({ user }) {
   return (
     <div>
       <div className="has-text-centered">
-        <button onClick={onClick} className="button is-primary" id="addTask">
+        <button onClick={onClick} class="button is-primary" id="addTask">
           Add Task
         </button>
       </div>
@@ -96,7 +110,7 @@ function AddTask({ user }) {
             className="modal-card-body"
             style={{ backgroundColor: "transparent" }}
           >
-            <form>
+            <form style={{ color: "black" }} onSubmit={handleSubmit}>
               <div className="field is-small">
                 <label className="label"> Event Name</label>
                 <div className="control " id="eventnamecontrol">
@@ -106,12 +120,10 @@ function AddTask({ user }) {
                     placeholder="event name"
                     id="eventname"
                     style={{ color: "black" }}
+                    required
                   />
                 </div>
-                <p className="helpName"> </p>
               </div>
-            </form>
-            <form style={{ marginTop: 20 }}>
               <div className="field">
                 <label className="label "> Event Description</label>
                 <div
@@ -124,50 +136,42 @@ function AddTask({ user }) {
                     placeholder="Event Description"
                     id="eventdescription"
                     style={{ color: "black" }}
+                    required
                   />
                 </div>
               </div>
-            </form>
-            <form style={{ color: "black" }}>
               <div className="field" style={{ marginTop: 20 }}>
                 <label className="label"> Event Date</label>
-                <form>
-                  <section
-                    className="field is-rounded"
-                    style={{ backgroundColor: "white", width: "238px" }}
-                  >
-                    <DateTimePicker
-                      id="datetimepicker"
-                      disableClock={true}
-                      disableCalendar={true}
-                      yearPlaceholder="yyyy"
-                      monthPlaceholder="mm"
-                      dayPlaceholder="dd"
-                      hourPlaceholder="00"
-                      minutePlaceholder="00"
-                      maxDate={maxDate}
-                      onChange={(date) => setSelectedDate(date)}
-                      isClearable
-                    />
-                  </section>
-                </form>
+                <section
+                  className="field is-rounded"
+                  style={{ backgroundColor: "white", width: "205px" }}
+                  has-backgroundColor
+                >
+                  <DateTimePicker
+                    id="datetimepicker"
+                    disableClock={true}
+                    disableCalendar={true}
+                    yearPlaceholder={dateStamp.getFullYear()}
+                    monthPlaceholder={dateStamp.getMonth()}
+                    dayPlaceholder={dateStamp.getDay()}
+                    hourPlaceholder={dateStamp.getHours() % 12}
+                    minutePlaceholder={dateStamp.getMinutes()}
+                    maxDate={maxDate}
+                    onChange={(date) => setSelectedDate(date)}
+                    isClearable
+                  />
+                </section>
               </div>
-            </form>
-          </section>
-          <footer
-            className="modal-card-footer"
-            style={{ backgroundColor: "transparent" }}
-          >
-            <form
-              className="md-12"
-              onSubmit={handleSubmit}
-              style={{ textAlignLast: "center" }}
-            >
-              <button type="submit" className="button is-primary" id="submit">
+              <button
+                type="submit"
+                className="button is-primary"
+                id="submit"
+                style={{ marginTop: 20, marginLeft: 280, marginRight: 280 }}
+              >
                 Submit
               </button>
             </form>
-          </footer>
+          </section>
         </div>
       </div>
     </div>

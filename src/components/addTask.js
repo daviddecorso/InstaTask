@@ -16,13 +16,16 @@ function AddTask({ user }) {
   toast.configure();
   const success = () =>
     toast.info("Successfuly Added Task: " + eventName.value);
-  const failure = () =>
-    toast.warn("Failed to Add Task " + eventName.value);
+  const failure = () => toast.error("Failed to Add Task " + eventName.value);
 
-  let maxDate = new Date(2022, 12, 30);
+  // Create DateStamp, maxDate is set to 3 years after current date
   const dateStamp = new Date();
+  var year = dateStamp.getFullYear();
+  var month = dateStamp.getMonth();
+  var day = dateStamp.getDay();
+  let maxDate = new Date(year + 3, month, day);
+  console.log(maxDate);
 
-  const [failed, setFailure] = useState(true);
   const [selectedDate, setSelectedDate] = useState(dateStamp);
 
   const handleSubmit = (event) => {
@@ -41,28 +44,24 @@ function AddTask({ user }) {
     };
 
     // Invalidate event if user only entered spaces
-    newEvent.desc = newEvent.desc.trim()
-    newEvent.summary = newEvent.summary.trim()
-    if(newEvent.desc != '' && newEvent.summary != '')
-    {
+    newEvent.desc = newEvent.desc.trim();
+    newEvent.summary = newEvent.summary.trim();
+    if (newEvent.desc != "" && newEvent.summary != "") {
       /* Sending to backend */
-      axios.post("http://localhost:5000/events/add", {
-      uid: user._id,
-      event: newEvent,
-    })
-    .then((res) => {
-      setFailure(false)
-    })
-    .catch((res) => {
-      setFailure(true)
-    });
+      axios
+        .post("http://localhost:5000/events/add", {
+          uid: user._id,
+          event: newEvent,
+        })
+        .then((res) => {
+          success();
+        })
+        .catch((res) => {
+          failure();
+        });
+    } else {
+      failure();
     }
-
-    // Sends Toast
-    if(!failed)
-    success();
-    else
-    failure();
 
     // close modal after handling submit
     modal.classList.remove("is-active");
@@ -88,10 +87,11 @@ function AddTask({ user }) {
         </button>
       </div>
       <div className="modal" className="modal" id="modal">
-        <div className="modal-background" 
-        id="modalbg" 
-        onClick={onClickExit}>
-        </div>
+        <div
+          className="modal-background"
+          id="modalbg"
+          onClick={onClickExit}
+        ></div>
         <div className="modal-card ">
           <header
             className="modal-card-head"
@@ -112,30 +112,27 @@ function AddTask({ user }) {
             style={{ backgroundColor: "transparent" }}
           >
             <form style={{ color: "black" }} onSubmit={handleSubmit}>
-              <div class="field is-small">
-                <label class="label"> Event Name</label>
-                <div class="control " id="eventnamecontrol">
+              <div className="field is-small">
+                <label className="label"> Event Name</label>
+                <div className="control " id="eventnamecontrol">
                   <input
-                    class="input is-secondary "
+                    className="input is-secondary "
                     type="text"
                     placeholder="event name"
                     id="eventname"
                     style={{ color: "black" }}
-                    oninvalid = "this.setCustomValidity('Please enter an event name')"
-                    oninput = "setCustomValidity('')"
                     required
                   />
                 </div>
-                <p class="helpName"> </p>
               </div>
-              <div class="field">
-                <label class="label "> Event Description</label>
+              <div className="field">
+                <label className="label "> Event Description</label>
                 <div
-                  class="control has-icons-left"
+                  className="control has-icons-left"
                   id="eventdescriptioncontrol"
                 >
                   <textarea
-                    class="textarea"
+                    className="textarea"
                     type="text"
                     placeholder="Event Description"
                     id="eventdescription"
@@ -144,20 +141,20 @@ function AddTask({ user }) {
                   />
                 </div>
               </div>
-              <div class="field" style={{ marginTop: 20 }}>
-                <label class="label"> Event Date</label>
+              <div className="field" style={{ marginTop: 20 }}>
+                <label className="label"> Event Date</label>
                 <section
-                  class="field is-rounded"
+                  className="field is-rounded"
                   style={{ backgroundColor: "white", width: "205px" }}
                   has-backgroundColor
                 >
                   <DateTimePicker
                     id="datetimepicker"
-                    disableClock="true"
-                    disableCalendar="true"
-                    yearPlaceholder= '2021'
-                    monthPlaceholder= {dateStamp.getMonth()}
-                    dayPlaceholder= {dateStamp.getDay()}
+                    disableClock={true}
+                    disableCalendar={true}
+                    yearPlaceholder="2021"
+                    monthPlaceholder={dateStamp.getMonth()}
+                    dayPlaceholder={dateStamp.getDay()}
                     hourPlaceholder={dateStamp.getHours() % 12}
                     minutePlaceholder={dateStamp.getMinutes()}
                     maxDate={maxDate}
@@ -168,7 +165,7 @@ function AddTask({ user }) {
               </div>
               <button
                 type="submit"
-                class="button is-primary"
+                className="button is-primary"
                 id="submit"
                 style={{ marginTop: 20, marginLeft: 280, marginRight: 280 }}
               >

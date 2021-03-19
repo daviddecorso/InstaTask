@@ -4,12 +4,32 @@ import btnNormal from "./img/harold1.jpg";
 import btnNormal2 from "./img/harold2.jpg";
 import btnNormal3 from "./img/harold3.jpg";
 import btnNormal4 from "./img/harold4.jpg";
+import { IconLeftArrow, IconRightArrow } from "@tabler/icons";
 
 function About() {
+  var settings = {
+    autoplay: true,
+    autoplaySpeed: 5000,
+    dots: true,
+    duration: 150,
+    nextArrow: <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+    <line x1="5" y1="12" x2="19" y2="12" />
+    <line x1="13" y1="18" x2="19" y2="12" />
+    <line x1="13" y1="6" x2="19" y2="12" />
+    </svg>,
+    prevArrow: <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-left" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+    <line x1="5" y1="12" x2="19" y2="12" />
+    <line x1="5" y1="12" x2="11" y2="18" />
+    <line x1="5" y1="12" x2="11" y2="6" />
+    </svg>
+  };
+  
   return (
     <div>
       <div>
-        <Slider>
+        <Slider {...settings}>
           <div>
             <img src={btnNormal} />
           </div>

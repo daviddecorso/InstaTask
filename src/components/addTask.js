@@ -24,7 +24,6 @@ function AddTask({ user }) {
   var month = dateStamp.getMonth();
   var day = dateStamp.getDay();
   let maxDate = new Date(year + 3, month, day);
-  console.log(maxDate);
 
   const [selectedDate, setSelectedDate] = useState(dateStamp);
 
@@ -152,7 +151,7 @@ function AddTask({ user }) {
                     id="datetimepicker"
                     disableClock={true}
                     disableCalendar={true}
-                    yearPlaceholder="2021"
+                    yearPlaceholder={dateStamp.getFullYear()}
                     monthPlaceholder={dateStamp.getMonth()}
                     dayPlaceholder={dateStamp.getDay()}
                     hourPlaceholder={dateStamp.getHours() % 12}

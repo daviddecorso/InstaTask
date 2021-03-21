@@ -96,15 +96,12 @@ function AddTask({ user }) {
             className="modal-card-head"
             style={{ backgroundColor: "transparent", outline: "none" }}
           >
-            <h3 className="title mb-6">
-              New Event Information
-              <button
-                className="delete is-large"
-                aria-label="close"
-                onClick={onClickExit}
-                style={{ marginLeft: 225 }}
-              ></button>
-            </h3>
+            <p className="modal-card-title">New Event Information</p>
+            <button
+              className="delete is-large"
+              aria-label="close"
+              onClick={onClickExit}
+            ></button>
           </header>
           <section
             className="modal-card-body"
@@ -162,14 +159,17 @@ function AddTask({ user }) {
                   />
                 </section>
               </div>
-              <button
-                type="submit"
-                className="button is-primary"
-                id="submit"
-                style={{ marginTop: 20, marginLeft: 280, marginRight: 280 }}
-              >
-                Submit
-              </button>
+              <div className="level">
+                <div className="level-item" style={{ marginTop: "5%"}}>
+                  <button
+                    type="submit"
+                    className="button is-primary"
+                    id="submit"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </div>
             </form>
           </section>
         </div>

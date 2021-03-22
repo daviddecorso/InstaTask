@@ -153,7 +153,7 @@ Lucas Rossell: Helped out with finishing user story [006] and finished the backe
 ### Task Allocation
 Moses Afrane: 
 
-Ethan Beaupre: 
+Ethan Beaupre: Fixed about page carousel for user story [014]. Laid out the modal and button for user story [015]
 
 David DeCorso: 
 

@@ -155,7 +155,7 @@ Moses Afrane:
 
 Ethan Beaupre: 
 
-David DeCorso: 
+David DeCorso: Did the frontend work for delete task [016], wrote the hashing function for [005], started working on push notifications [008].
 
 Sean Kemp: Finished tutorial help page.
 

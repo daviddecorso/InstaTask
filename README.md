@@ -151,7 +151,7 @@ Lucas Rossell: Helped out with finishing user story [006] and finished the backe
 - [Product Demonstration](https://www.youtube.com/watch?v=fGYMc8iasiw)
 
 ### Task Allocation
-Moses Afrane: 
+Moses Afrane: Added error checking and input validation for user story [006]. Made significant progress on frontend for user story [011].
 
 Ethan Beaupre: Fixed about page carousel for user story [014]. Laid out the modal and button for user story [015]
 

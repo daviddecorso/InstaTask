@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import React from "react";
+import Settings from "./Settings";
 
-const Nav = ({ authenticated, setAuth }) => {
+const Nav = ({ authenticated, setAuth, user }) => {
   function handleSignInClick() {
     // Authenticate and store cookie
     window.open("http://localhost:5000/auth/google", "_self");
@@ -32,6 +33,11 @@ const Nav = ({ authenticated, setAuth }) => {
             <li onClick={handleSignInClick}>Login</li>
           )}
         </ul>
+        {authenticated && (
+            <div className="navbar-end">
+              <Settings user={user} />
+            </div>
+          )}
       </nav>
     </div>
   );

@@ -142,8 +142,8 @@ Lucas Rossell: Helped out with finishing user story [006] and finished the backe
 
 # Sprint 7
 - [Trello Board](https://trello.com/b/4OQlQMk6/instatask)
-- [Burndown Chart](https://cdn.discordapp.com/attachments/800004461979893785/820843264595984424/unknown.png)
-- [Velocity Chart](https://cdn.discordapp.com/attachments/800004461979893785/820843347681476649/unknown.png)
+- [Burndown Chart](https://cdn.discordapp.com/attachments/800004461979893785/823377391145451541/unknown.png)
+- [Velocity Chart](https://cdn.discordapp.com/attachments/800004461979893785/823377413906890762/unknown.png)
 - [System Architecture](https://github.com/daviddecorso/InstaTask/blob/main/artifacts/architecture.md)
 - [Frontend Source Code](https://github.com/daviddecorso/InstaTask/tree/main/src)
 - [Backend Source Code](https://github.com/daviddecorso/InstaTask/tree/main/backend)
@@ -159,4 +159,4 @@ David DeCorso:
 
 Sean Kemp: Finished tutorial help page.
 
-Lucas Rossell: 
+Lucas Rossell: Created server functions / backend implementation for user stories [011] and [016]. Worked on [005].

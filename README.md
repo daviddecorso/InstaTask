@@ -148,7 +148,7 @@ Lucas Rossell: Helped out with finishing user story [006] and finished the backe
 - [Frontend Source Code](https://github.com/daviddecorso/InstaTask/tree/main/src)
 - [Backend Source Code](https://github.com/daviddecorso/InstaTask/tree/main/backend)
 - [Testing](https://github.com/daviddecorso/InstaTask/tree/main/backend/test)
-- [Product Demonstration](https://www.youtube.com/watch?v=hsZEgZHgr0w)
+- [Product Demonstration](https://www.youtube.com/watch?v=fGYMc8iasiw)
 
 ### Task Allocation
 Moses Afrane: 

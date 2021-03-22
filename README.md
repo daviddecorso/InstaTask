@@ -139,3 +139,24 @@ David DeCorso: Did zoom filtering [017], worked on marking tasks as done on the 
 Sean Kemp: added text for the tutorial page and added testing requirement for tutorial user story.
 
 Lucas Rossell: Helped out with finishing user story [006] and finished the backend implementation for user story [007].
+
+# Sprint 7
+- [Trello Board](https://trello.com/b/4OQlQMk6/instatask)
+- [Burndown Chart](https://cdn.discordapp.com/attachments/800004461979893785/820843264595984424/unknown.png)
+- [Velocity Chart](https://cdn.discordapp.com/attachments/800004461979893785/820843347681476649/unknown.png)
+- [System Architecture](https://github.com/daviddecorso/InstaTask/blob/main/artifacts/architecture.md)
+- [Frontend Source Code](https://github.com/daviddecorso/InstaTask/tree/main/src)
+- [Backend Source Code](https://github.com/daviddecorso/InstaTask/tree/main/backend)
+- [Testing](https://github.com/daviddecorso/InstaTask/tree/main/backend/test)
+- [Product Demonstration](https://www.youtube.com/watch?v=hsZEgZHgr0w)
+
+### Task Allocation
+Moses Afrane: 
+
+Ethan Beaupre: 
+
+David DeCorso: 
+
+Sean Kemp: Finished tutorial help page.
+
+Lucas Rossell: 

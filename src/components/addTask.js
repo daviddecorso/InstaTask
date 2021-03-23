@@ -5,14 +5,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function AddTask({ user }) {
-  // Style for Add Task Button
-  const buttonStyle = {
-    backgroundColor: "#062751",
-    borderColor: "rgba(0, 0, 0, 0)",
-    outline: "none",
-    color: "white",
-    marginTop: 20,
-  };
+
   toast.configure();
   const success = () =>
     toast.info("Successfuly Added Task: " + eventName.value);
@@ -20,8 +13,8 @@ function AddTask({ user }) {
 
   // Create DateStamp, maxDate is set to 3 years after current date
   const dateStamp = new Date();
-  var year = dateStamp.getFullYear();
-  var month = dateStamp.getMonth();
+  var year = dateStamp.getFullYear().toString;
+  var month = dateStamp.getMonth().toString;
   var day = dateStamp.getDay();
   let maxDate = new Date(year + 3, month, day);
 
@@ -81,11 +74,11 @@ function AddTask({ user }) {
   return (
     <div>
       <div className="has-text-centered">
-        <button onClick={onClick} class="button is-primary" id="addTask">
+        <button onClick={onClick} class="button is-primary" id="addTask" data-testid = "add-button">
           Add Task
         </button>
       </div>
-      <div className="modal" className="modal" id="modal">
+      <div className="modal" id="modal">
         <div
           className="modal-background"
           id="modalbg"
@@ -101,6 +94,7 @@ function AddTask({ user }) {
               className="delete is-large"
               aria-label="close"
               onClick={onClickExit}
+              data-testid = "modal-close"
             ></button>
           </header>
           <section
@@ -114,7 +108,7 @@ function AddTask({ user }) {
                   <input
                     className="input is-secondary "
                     type="text"
-                    placeholder="event name"
+                    placeholder="eventName"
                     id="eventname"
                     style={{ color: "black" }}
                     required
@@ -130,7 +124,7 @@ function AddTask({ user }) {
                   <textarea
                     className="textarea"
                     type="text"
-                    placeholder="Event Description"
+                    placeholder="eventDescription"
                     id="eventdescription"
                     style={{ color: "black" }}
                     required
@@ -148,11 +142,11 @@ function AddTask({ user }) {
                     id="datetimepicker"
                     disableClock={true}
                     disableCalendar={true}
-                    yearPlaceholder={dateStamp.getFullYear()}
-                    monthPlaceholder={dateStamp.getMonth()}
-                    dayPlaceholder={dateStamp.getDay()}
-                    hourPlaceholder={dateStamp.getHours() % 12}
-                    minutePlaceholder={dateStamp.getMinutes()}
+                    yearPlaceholder={dateStamp.getFullYear().toString()}
+                    monthPlaceholder={dateStamp.getMonth().toString()}
+                    dayPlaceholder={dateStamp.getDay().toString()}
+                    hourPlaceholder={(dateStamp.getHours() % 12).toString()}
+                    minutePlaceholder={dateStamp.getMinutes().toString()}
                     maxDate={maxDate}
                     onChange={(date) => setSelectedDate(date)}
                     isClearable
@@ -165,6 +159,7 @@ function AddTask({ user }) {
                     type="submit"
                     className="button is-primary"
                     id="submit"
+                    data-testid = "submit-button"
                   >
                     Submit
                   </button>

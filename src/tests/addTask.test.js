@@ -1,6 +1,6 @@
 import React from "react"
 import {render, fireEvent, queryByTestId, queryByPlaceholderText, queryAllByPlaceholderText} from "@testing-library/react"
-import AddTask from "./components/addTask";
+import AddTask from "../components/addTask";
 
 it("renders correctly", () => {
     // Test to ensure that objects render
@@ -27,4 +27,3 @@ describe("Input value", () => {
         expect(eventDescriptionInput.value).toBe("test");
     })
 })
-

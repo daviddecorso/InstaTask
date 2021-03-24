@@ -1,6 +1,6 @@
 import React from "react"
 import {render, queryByTestId, queryByPlaceholderText} from "@testing-library/react"
-import Login from "./components/Login"
+import Login from "../components/Login"
 
 it("renders correctly", () =>{
     const{queryByTestId,queryByPlaceholderText} = render(<Login/>);

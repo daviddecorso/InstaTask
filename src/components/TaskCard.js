@@ -8,6 +8,7 @@ import { isAfter } from "date-fns/esm";
 import { IconSquare, IconSquareCheck, IconChevronDown } from "@tabler/icons";
 import axios from "axios";
 import { toast } from "react-toastify";
+import EditTask from "./editTask"
 
 // Style for task cards
 const cardButtonStyle = {
@@ -120,8 +121,8 @@ function TaskCard({ event, zoomFilter, user }) {
                   <div className="content">{event.desc}</div>
                 </div>
                 <footer className="card-footer">
-                  <a href="#" className="card-footer-item">
-                    Edit
+                  <a className="card-footer-item">
+                    <EditTask user = {user} event = {event}/>
                   </a>
                   <a onClick={deleteTask} className="card-footer-item">
                     Delete

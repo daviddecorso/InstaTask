@@ -1,8 +1,8 @@
 import React from "react";
 
 import help from "./img/importhelp.png";
-import help1 from "./img/importhelp1.png";
-import help2 from "./img/importhelp2.png";
+import help1 from "./img/importhelp2.png";
+import help2 from "./img/importhelp3.png";
 
 function ImportHelp() {
   return (

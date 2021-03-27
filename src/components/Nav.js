@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import React from "react";
 import Settings from "./Settings";
 import { IconLogout } from "@tabler/icons";
@@ -18,7 +17,9 @@ const Nav = ({ authenticated, setAuth, user }) => {
         aria-label="main navigation"
       >
         <div className="navbar-start" style={{ alignItems: "center" }}>
-          <h1 class="title is-3">InstaTask</h1>
+          <a href="/" className="title is-3" style={{ paddingLeft: "5px" }}>
+            InstaTask
+          </a>
         </div>
         {authenticated && (
           <div className="navbar-end">

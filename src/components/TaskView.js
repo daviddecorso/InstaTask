@@ -5,7 +5,7 @@ import Tabs from "./Tabs";
 import TaskCard from "./TaskCard";
 import CalendarView from "./CalendarView";
 import AddTask from "./addTask";
-import { IconFilter } from "@tabler/icons";
+import { IconFilter, IconBellRinging } from "@tabler/icons";
 
 function TaskView({ events, setEvents, user }) {
   // Determines if the view is mobile
@@ -29,6 +29,27 @@ function TaskView({ events, setEvents, user }) {
     height: cardContainerHeight,
     overflow: "auto",
   };
+
+  const demoNotificationStyle = {
+    position: "absolute",
+    right: "5px",
+    bottom: "10px",
+    width: "50px",
+    height: "50px",
+    borderRadius: "50%",
+    backgroundColor: "#1659b1",
+    border: "none",
+    active: "none",
+    outline: "none",
+  };
+
+  async function sendDemoNotification() {
+    const reg = await navigator.serviceWorker.getRegistration();
+    reg.showNotification("Test Push Notification", {
+      body: "Test notif!",
+      data: { url: window.location.href },
+    });
+  }
 
   // This function renders the proper components when the screen is resized.
   window.onresize = function () {
@@ -108,6 +129,9 @@ function TaskView({ events, setEvents, user }) {
           </div>
         )}
       </div>
+      <button style={demoNotificationStyle} onClick={sendDemoNotification}>
+        <IconBellRinging color="white" size={100} stroke={1.25} />
+      </button>
     </div>
   );
 }

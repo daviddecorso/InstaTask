@@ -2,6 +2,7 @@ const router = require("express").Router();
 let userModel = require("../models/user.model.js");
 const { parseICS } = require("../src/parseICS.js");
 const { updateCalendar } = require("../src/updateCalendar.js");
+const webpush = require("web-push");
 
 router.route("/").get((req, res) => {
   userModel
@@ -47,6 +48,28 @@ router.route("/update/calendar").put((req, res) => {
         .catch((err) => res.status(400).json("Error: " + err));
     })
     .catch((err) => res.status(400).json("Error: " + err));
+});
+
+webpush.setVapidDetails(
+  process.env.WEB_PUSH_CONTACT,
+  process.env.PUBLIC_VAPID_KEY,
+  process.env.PRIVATE_VAPID_KEY
+);
+
+router.route("/subscribe").post((req, res) => {
+  const subscription = req.body;
+
+  const payload = JSON.stringify({
+    title: "Hello!",
+    body: "It works.",
+  });
+
+  webpush
+    .sendNotification(subscription, payload)
+    .then((result) => console.log(result))
+    .catch((e) => console.log(e.stack));
+
+  res.status(200).json({ success: true });
 });
 
 module.exports = router;

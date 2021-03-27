@@ -13,7 +13,7 @@ function Settings({ user }) {
   };
 
   return (
-    <div>
+    <>
       <button
         onClick={onClick}
         id="settings"
@@ -39,7 +39,7 @@ function Settings({ user }) {
           onClick={onClickExit}
         ></button>
       </div>
-    </div>
+    </>
   );
 }
 export default Settings;

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import DateTimePicker from "react-datetime-picker";
 import axios from "axios";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { render } from "@testing-library/react";
 
@@ -57,7 +57,6 @@ function EditTask({ user, event }) {
       .catch((res) => {
         errorNotif();
       });
-
   };
 
   const onClick = () => {
@@ -153,8 +152,7 @@ function EditTask({ user, event }) {
                   <form>
                     <section
                       class="field is-rounded"
-                      style={{ backgroundColor: "white", width:  "206px" }}
-                      has-backgroundColor
+                      style={{ backgroundColor: "white", width: "206px" }}
                     >
                       <DateTimePicker
                         id="datetimepicker"

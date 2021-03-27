@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import DateTimePicker from "react-datetime-picker";
 import axios from "axios";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function AddTask({ user }) {
-
   toast.configure();
   const success = () =>
     toast.info("Successfuly Added Task: " + eventName.value);
@@ -32,13 +31,12 @@ function AddTask({ user }) {
       sequence: 0,
       summary: eventName.value,
       complete: false,
-      dtend: selectedDate,
     };
 
     // Invalidate event if user only entered spaces
     newEvent.desc = newEvent.desc.trim();
     newEvent.summary = newEvent.summary.trim();
-    if (newEvent.desc != "" && newEvent.summary != "") {
+    if (newEvent.desc !== "" && newEvent.summary !== "") {
       /* Sending to backend */
       axios
         .post("http://localhost:5000/events/add", {
@@ -74,7 +72,12 @@ function AddTask({ user }) {
   return (
     <div>
       <div className="has-text-centered">
-        <button onClick={onClick} class="button is-primary" id="addTask" data-testid = "add-button">
+        <button
+          onClick={onClick}
+          className="button is-primary"
+          id="addTask"
+          data-testid="add-button"
+        >
           Add Task
         </button>
       </div>
@@ -94,7 +97,7 @@ function AddTask({ user }) {
               className="delete is-large"
               aria-label="close"
               onClick={onClickExit}
-              data-testid = "modal-close"
+              data-testid="modal-close"
             ></button>
           </header>
           <section
@@ -136,7 +139,6 @@ function AddTask({ user }) {
                 <section
                   className="field is-rounded"
                   style={{ backgroundColor: "white", width: "205px" }}
-                  has-backgroundColor
                 >
                   <DateTimePicker
                     id="datetimepicker"
@@ -154,12 +156,12 @@ function AddTask({ user }) {
                 </section>
               </div>
               <div className="level">
-                <div className="level-item" style={{ marginTop: "5%"}}>
+                <div className="level-item" style={{ marginTop: "5%" }}>
                   <button
                     type="submit"
                     className="button is-primary"
                     id="submit"
-                    data-testid = "submit-button"
+                    data-testid="submit-button"
                   >
                     Submit
                   </button>

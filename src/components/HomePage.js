@@ -39,10 +39,17 @@ function HomePage({ user, setUser, events, setEvents }) {
         }
 
         axios
-          .get("http://localhost:5000/events/" + responseJson.user._id)
-          .then((res) => {
-            setEvents(res.data);
-          });
+          .put("http://localhost:5000/events/update", {
+            id: responseJson.user._id,
+            calendarLink: responseJson.user.calendarLink,
+          })
+          .then(() =>
+            axios
+              .get("http://localhost:5000/events/" + responseJson.user._id)
+              .then((res) => {
+                setEvents(res.data);
+              })
+          );
       })
       .catch((error) => {
         setAuth(false);

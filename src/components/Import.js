@@ -12,7 +12,13 @@ function Import({ user, setImport }) {
           user: user,
           calendarLink: importBox.value,
         })
-        .then((res) => console.log(res.data));
+        .then((res) => console.log(res.data))
+        .then(() =>
+          axios.put("http://localhost:5000/events/update", {
+            id: user._id,
+            calendarLink: importBox.value,
+          })
+        );
     } else {
       window.alert("Please submit a valid .ics URL.");
     }

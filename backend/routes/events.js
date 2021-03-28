@@ -6,6 +6,7 @@ const { toggleHidden } = require("../src/toggleHidden.js");
 const { editCalendarEvent } = require("../src/editCalendarEvent.js");
 const { toggleComplete } = require("../src/toggleComplete.js");
 const { updateCalendar } = require("../src/updateCalendar.js");
+const { parseICS } = require("../src/parseICS.js");
 
 router.route("/:id").get((req, res) => {
   userModel
@@ -31,8 +32,8 @@ router.route("/delete").put((req, res) => {
 });
 
 router.route("/update").put((req, res) => {
-  const id = req.user._id;
-  const calendarLink = req.user.calendarLink;
+  let id = req.body.id;
+  let calendarLink = req.body.calendarLink;
   let eventList = async () => {
     return await parseICS(calendarLink).then((list) => {
       return list;

@@ -160,3 +160,24 @@ David DeCorso: Did the frontend work for delete task [016], wrote the hashing fu
 Sean Kemp: Finished tutorial help page.
 
 Lucas Rossell: Created server functions / backend implementation for user stories [011] and [016]. Worked on [005].
+
+# Sprint 8
+- [Trello Board](https://trello.com/b/4OQlQMk6/instatask)
+- [Burndown Chart](https://cdn.discordapp.com/attachments/800004461979893785/825866220213501973/unknown.png)
+- [Velocity Chart](https://cdn.discordapp.com/attachments/800004461979893785/825866235039449098/unknown.png)
+- [System Architecture](https://github.com/daviddecorso/InstaTask/blob/main/artifacts/architecture.md)
+- [Frontend Source Code](https://github.com/daviddecorso/InstaTask/tree/main/src)
+- [Backend Source Code](https://github.com/daviddecorso/InstaTask/tree/main/backend)
+- [Testing](https://github.com/daviddecorso/InstaTask/tree/main/backend/test)
+- [Product Demonstration]()
+
+### Task Allocation
+Moses Afrane:
+
+Ethan Beaupre: 
+
+David DeCorso: 
+
+Sean Kemp: 
+
+Lucas Rossell: Finished user story [005] and assisted with user story [011], mainly working on the backend.

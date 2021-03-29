@@ -178,6 +178,6 @@ Ethan Beaupre: Completed settings modal for user story [010].
 
 David DeCorso: Completed push notification functionality (user story [008]), made some UI and bug fixes.
 
-Sean Kemp: 
+Sean Kemp: Polished tutorial pages (matched with about page) and add to img folder and Sprint 8 user stories.
 
 Lucas Rossell: Finished user story [005] and assisted with user story [011], mainly working on the backend.

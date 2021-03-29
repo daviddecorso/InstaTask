@@ -174,7 +174,7 @@ Lucas Rossell: Created server functions / backend implementation for user storie
 ### Task Allocation
 Moses Afrane:
 
-Ethan Beaupre: 
+Ethan Beaupre: Completed settings modal for user story [010].
 
 David DeCorso: Completed push notification functionality (user story [008]), made some UI and bug fixes.
 

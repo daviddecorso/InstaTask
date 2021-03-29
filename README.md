@@ -172,7 +172,7 @@ Lucas Rossell: Created server functions / backend implementation for user storie
 - [Product Demonstration]()
 
 ### Task Allocation
-Moses Afrane:
+Moses Afrane: Completed frontend for user story [011], addressed mobile issues for front end of user stories [005] and [011]
 
 Ethan Beaupre: Completed settings modal for user story [010].
 

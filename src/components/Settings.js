@@ -122,14 +122,14 @@ function Settings({ user }) {
                       onClick={completeTask}
                     >
                       {!toggleZoom && (
-                        <svg xmlns="http://www.w3.org/2000/svg" class="iconTabler iconTablerToggleLeft" width="42" height="42" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="iconTabler iconTablerToggleLeft" width="42" height="42" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#ffffff" fill="none" strokeLinecap="round" strokeLinejoin="round">
                           <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                           <circle cx="8" cy="12" r="2" />
                           <rect x="2" y="6" width="20" height="12" rx="6" />
                         </svg>
                       )}{" "}
                       {toggleZoom && (
-                        <svg xmlns="http://www.w3.org/2000/svg" class="iconTabler iconTablerToggleRight" width="42" height="42" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="iconTabler iconTablerToggleRight" width="42" height="42" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#ffffff" fill="none" strokeLinecap="round" strokeLinejoin="round">
                           <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                           <circle cx="16" cy="12" r="2" />
                           <rect x="2" y="6" width="20" height="12" rx="6" />

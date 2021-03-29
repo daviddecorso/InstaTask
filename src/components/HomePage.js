@@ -59,7 +59,7 @@ function HomePage({ user, setUser, events, setEvents }) {
 
   return (
     <div>
-      <Nav authenticated={authenticated} setAuth={setAuth} />
+      <Nav authenticated={authenticated} setAuth={setAuth} user={user} />
 
       {/* Displays import modal */}
       {displayImport && (

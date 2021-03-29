@@ -176,7 +176,7 @@ Moses Afrane:
 
 Ethan Beaupre: 
 
-David DeCorso: 
+David DeCorso: Completed push notification functionality (user story [008]), made some UI and bug fixes.
 
 Sean Kemp: 
 

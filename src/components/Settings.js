@@ -79,10 +79,10 @@ function Settings({ user }) {
                     <p style={{ color: "white" }}>Default Notification Time</p>
                   </div>
                   <div className="column">
-                    <div class="dropdown" id="dropdown-menu">
-                      <div class="dropdown-trigger">
+                    <div className="dropdown" id="dropdown-menu">
+                      <div className="dropdown-trigger">
                         <button
-                          class="button is-primary"
+                          className="button is-primary"
                           aria-haspopup="true"
                           aria-controls="dropdown-menu2"
                           onClick={onClickDrop}
@@ -91,18 +91,18 @@ function Settings({ user }) {
                           <IconCaretDown color="white" size={28} stroke={2.0} />
                         </button>
                       </div>
-                      <div class="dropdown-menu" role="menu">
-                        <div class="dropdown-content">
-                          <div class="dropdown-item">
+                      <div className="dropdown-menu" role="menu">
+                        <div className="dropdown-content">
+                          <div className="dropdown-item">
                             <p style={{ color: "black" }}>1 Hour</p>
                           </div>
-                          <div class="dropdown-item">
+                          <div className="dropdown-item">
                             <p style={{ color: "black" }}>12 Hours</p>
                           </div>
-                          <div class="dropdown-item">
+                          <div className="dropdown-item">
                             <p style={{ color: "black" }}>1 Day</p>
                           </div>
-                          <div class="dropdown-item">
+                          <div className="dropdown-item">
                             <p style={{ color: "black" }}>1 Week</p>
                           </div>
                         </div>
@@ -122,18 +122,18 @@ function Settings({ user }) {
                       onClick={completeTask}
                     >
                       {!toggleZoom && (
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-tabler icon-tabler-toggle-left" width="42" height="42" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="iconTabler iconTablerToggleLeft" width="42" height="42" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
                           <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                           <circle cx="8" cy="12" r="2" />
                           <rect x="2" y="6" width="20" height="12" rx="6" />
                         </svg>
                       )}{" "}
                       {toggleZoom && (
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-tabler icon-tabler-toggle-right" width="42" height="42" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                        <circle cx="16" cy="12" r="2" />
-                        <rect x="2" y="6" width="20" height="12" rx="6" />
-                      </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="iconTabler iconTablerToggleRight" width="42" height="42" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                          <circle cx="16" cy="12" r="2" />
+                          <rect x="2" y="6" width="20" height="12" rx="6" />
+                        </svg>
                       )}
                     </span>
                   </div>

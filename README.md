@@ -169,7 +169,7 @@ Lucas Rossell: Created server functions / backend implementation for user storie
 - [Frontend Source Code](https://github.com/daviddecorso/InstaTask/tree/main/src)
 - [Backend Source Code](https://github.com/daviddecorso/InstaTask/tree/main/backend)
 - [Testing](https://github.com/daviddecorso/InstaTask/tree/main/backend/test)
-- [Product Demonstration]()
+- [Product Demonstration](https://www.youtube.com/watch?v=_ZMLo-bCyhw)
 
 ### Task Allocation
 Moses Afrane: Completed frontend for user story [011], addressed mobile issues for front end of user stories [005] and [011]

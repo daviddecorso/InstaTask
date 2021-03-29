@@ -9,7 +9,7 @@ function Import({ user, setImport }) {
       setImport(false);
       axios
         .put("http://localhost:5000/users/update/calendar", {
-          user: user,
+          id: user._id,
           calendarLink: importBox.value,
         })
         .then((res) => console.log(res.data))

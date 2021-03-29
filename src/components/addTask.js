@@ -88,10 +88,7 @@ function AddTask({ user }) {
           onClick={onClickExit}
         ></div>
         <div className="modal-card ">
-          <header
-            className="modal-card-head"
-            style={{ backgroundColor: "transparent", outline: "none" }}
-          >
+          <header className="modal-card-head" style={{ outline: "none" }}>
             <p className="modal-card-title">New Event Information</p>
             <button
               className="delete is-large"
@@ -100,10 +97,7 @@ function AddTask({ user }) {
               data-testid="modal-close"
             ></button>
           </header>
-          <section
-            className="modal-card-body"
-            style={{ backgroundColor: "transparent" }}
-          >
+          <section className="modal-card-body">
             <form style={{ color: "black" }} onSubmit={handleSubmit}>
               <div className="field is-small">
                 <label className="label"> Event Name</label>
@@ -136,10 +130,7 @@ function AddTask({ user }) {
               </div>
               <div className="field" style={{ marginTop: 20 }}>
                 <label className="label"> Event Date</label>
-                <section
-                  className="field is-rounded"
-                  style={{ backgroundColor: "white", width: "205px" }}
-                >
+                <section className="field is-rounded">
                   <DateTimePicker
                     id="datetimepicker"
                     disableClock={true}

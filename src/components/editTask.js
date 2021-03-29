@@ -92,10 +92,7 @@ function EditTask({ user, event }) {
             onClick={onClickExit}
           ></div>
           <div class="modal-card">
-            <header
-              class="modal-card-head"
-              style={{ backgroundColor: "transparent", outline: "none" }}
-            >
+            <header class="modal-card-head">
               <p className="modal-card-title">Update Event Information</p>
               <button
                 className="delete is-large"
@@ -104,10 +101,7 @@ function EditTask({ user, event }) {
                 data-testid="modal-close"
               ></button>
             </header>
-            <section
-              class="modal-card-body"
-              style={{ backgroundColor: "transparent" }}
-            >
+            <section class="modal-card-body">
               <form>
                 <div class="field is-small">
                   <label class="label"> Event Name</label>
@@ -150,10 +144,7 @@ function EditTask({ user, event }) {
                 <div class="field" style={{ marginTop: 20 }}>
                   <label class="label"> Event Date</label>
                   <form>
-                    <section
-                      class="field is-rounded"
-                      style={{ backgroundColor: "white", width: "206px" }}
-                    >
+                    <section class="field is-rounded">
                       <DateTimePicker
                         id="datetimepicker"
                         disableClock="true"
@@ -171,21 +162,21 @@ function EditTask({ user, event }) {
                   </form>
                 </div>
               </form>
-            </section>
-            <form onSubmit={handleSubmit}>
-              <div className="level">
-                <div className="level-item" style={{ marginTop: "5%" }}>
-                  <button
-                    type="submit"
-                    className="button is-primary"
-                    id="submit"
-                    data-testid="submit-button"
-                  >
-                    Submit
-                  </button>
+              <form onSubmit={handleSubmit}>
+                <div className="level">
+                  <div className="level-item" style={{ marginTop: "5%" }}>
+                    <button
+                      type="submit"
+                      className="button is-primary"
+                      id="submit"
+                      data-testid="submit-button"
+                    >
+                      Submit
+                    </button>
+                  </div>
                 </div>
-              </div>
-            </form>
+              </form>
+            </section>
           </div>
         </div>
       )}

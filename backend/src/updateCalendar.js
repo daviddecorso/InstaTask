@@ -13,20 +13,25 @@ async function updateCalendar(id, eventList) {
   const entries = eventList.entries();
   const entriesUser = user.calendar.events.entries();
   var oldEventIds = [];
-  var newEventIds = [];
-  // I do a lot of looping and copying because I was just trying to get stuff to work correctly.
+
   // There is almost certainly some optimization that can be done here.
   for (const entry of entriesUser) {
     oldEventIds.push(entry[1].uid);
   }
 
-  for (const entry of entries) {
-    if (!oldEventIds.includes(entry[1].uid)) newEventIds.push(entry[1]);
+  for (let entry of entries) {
+    if (!oldEventIds.includes(entry[1].uid)) {
+      date = entry[1].dtstart;
+      entry[1].dtstart = new Date(date);
+      if (entry[1].dtend == null) entry[1].dtend = entry[1].dtstart;
+      else {
+        date = entry[1].dtend;
+        entry[1].dtend = new Date(date);
+      }
+      user.calendar.events.push(entry[1]);
+    }
   }
 
-  for (const item of newEventIds) {
-    user.calendar.events.push(item);
-  }
   await user
     .save()
     .then(() => console.log("Successfully updated calendar."))

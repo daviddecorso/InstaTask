@@ -25,6 +25,22 @@ function TaskView({ events, setEvents, user }) {
 
   const cardContainerHeight = isMobile ? window.innerHeight - 280 : "700px";
 
+  function compareDates(a, b) {
+    // Compares event dates
+    const dateA = a.dtstart;
+    const dateB = b.dtstart;
+
+    let comparison = 0;
+    if (dateA > dateB) {
+      comparison = 1;
+    } else if (dateA < dateB) {
+      comparison = -1;
+    }
+    return comparison;
+  }
+
+  let sortedEvents = events.sort(compareDates);
+
   const cardContainerStyle = {
     height: cardContainerHeight,
     overflow: "auto",
@@ -98,7 +114,7 @@ function TaskView({ events, setEvents, user }) {
             </div>
             <div style={cardContainerStyle}>
               {/* Displays a list of tasks */}
-              {events.map((event) => (
+              {sortedEvents.map((event) => (
                 <TaskCard
                   event={event}
                   zoomFilter={zoomFilter}

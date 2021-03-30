@@ -25,21 +25,21 @@ function TaskView({ events, setEvents, user }) {
 
   const cardContainerHeight = isMobile ? window.innerHeight - 280 : "700px";
 
-  function compare(a, b) {
-    // Use toUpperCase() to ignore character casing
-    const bandA = a.dtstart;
-    const bandB = b.dtstart;
+  function compareDates(a, b) {
+    // Compares event dates
+    const dateA = a.dtstart;
+    const dateB = b.dtstart;
 
     let comparison = 0;
-    if (bandA > bandB) {
+    if (dateA > dateB) {
       comparison = 1;
-    } else if (bandA < bandB) {
+    } else if (dateA < dateB) {
       comparison = -1;
     }
     return comparison;
   }
 
-  let sortedEvents = events.sort(compare);
+  let sortedEvents = events.sort(compareDates);
 
   const cardContainerStyle = {
     height: cardContainerHeight,

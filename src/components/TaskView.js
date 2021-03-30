@@ -25,6 +25,22 @@ function TaskView({ events, setEvents, user }) {
 
   const cardContainerHeight = isMobile ? window.innerHeight - 280 : "700px";
 
+  function compare(a, b) {
+    // Use toUpperCase() to ignore character casing
+    const bandA = a.dtstart;
+    const bandB = b.dtstart;
+
+    let comparison = 0;
+    if (bandA > bandB) {
+      comparison = 1;
+    } else if (bandA < bandB) {
+      comparison = -1;
+    }
+    return comparison;
+  }
+
+  let sortedEvents = events.sort(compare);
+
   const cardContainerStyle = {
     height: cardContainerHeight,
     overflow: "auto",
@@ -98,7 +114,7 @@ function TaskView({ events, setEvents, user }) {
             </div>
             <div style={cardContainerStyle}>
               {/* Displays a list of tasks */}
-              {events.map((event) => (
+              {sortedEvents.map((event) => (
                 <TaskCard
                   event={event}
                   zoomFilter={zoomFilter}

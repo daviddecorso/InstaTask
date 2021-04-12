@@ -9,21 +9,23 @@ import { IconFilter, IconBellRinging } from "@tabler/icons";
 
 function TaskView({ events, setEvents, user }) {
   // Determines if the view is mobile
-  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1024px)" });
 
   // State that tracks which mobile view is selected
   const [activeTab, setTab] = useState("todo");
 
   // States that control which component should be rendered on mobile (todo view is default)
   const [todoView, setTodoView] = useState(true);
-  const [calView, setCalView] = useState(!isMobile);
+  const [calView, setCalView] = useState(!isTabletOrMobile);
 
   // Tracks if zoom events should be filtered from task view
   const [zoomFilter, setZoomFilter] = useState(true);
 
   const [calEvents, setCalEvents] = useState(events);
 
-  const cardContainerHeight = isMobile ? window.innerHeight - 280 : "700px";
+  const cardContainerHeight = isTabletOrMobile
+    ? window.innerHeight - 280
+    : "700px";
 
   function compareDates(a, b) {
     // Compares event dates
@@ -69,7 +71,7 @@ function TaskView({ events, setEvents, user }) {
 
   // This function renders the proper components when the screen is resized.
   window.onresize = function () {
-    if (isMobile) {
+    if (isTabletOrMobile) {
       if (activeTab === "todo") {
         setTodoView(true);
         setCalView(false);
@@ -85,7 +87,7 @@ function TaskView({ events, setEvents, user }) {
 
   return (
     <div>
-      {isMobile && (
+      {isTabletOrMobile && (
         <Tabs
           activeTab={activeTab}
           setTab={setTab}
@@ -141,6 +143,7 @@ function TaskView({ events, setEvents, user }) {
               events={events}
               calEvents={calEvents}
               setCalEvents={setCalEvents}
+              isMobile={isTabletOrMobile}
             />
           </div>
         )}

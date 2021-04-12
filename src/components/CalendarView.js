@@ -17,9 +17,19 @@ const localizer = dateFnsLocalizer({
   locales,
 });
 
-function CalendarView({ events, calEvents, setCalEvents }) {
+function CalendarView({ events, calEvents, setCalEvents, isMobile }) {
   let filterEventsArray = [];
   const [calZoomFilter, setCalZoomFilter] = useState(true);
+
+  const mobileStyle = {
+    width: "100vw",
+    height: "calc(100vh - 200px)",
+  };
+
+  const desktopStyle = {
+    height: "700px",
+    width: "50vw",
+  };
 
   function setFilterEventsArray() {
     setCalZoomFilter(!calZoomFilter);
@@ -52,7 +62,7 @@ function CalendarView({ events, calEvents, setCalEvents }) {
           startAccessor="dtstart"
           endAccessor="dtend"
           titleAccessor="summary"
-          style={{ height: 700, width: window.innerWidth / 2 }}
+          style={isMobile ? mobileStyle : desktopStyle}
         />
       </div>
       <div className="level">

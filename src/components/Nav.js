@@ -15,6 +15,11 @@ const Nav = ({ authenticated, setAuth, user }) => {
         className="navbar is-primary"
         role="navigation"
         aria-label="main navigation"
+        style={{
+          display: "flex",
+          placeContent: "space-between",
+          alignItems: "center",
+        }}
       >
         <div className="navbar-start" style={{ alignItems: "center" }}>
           <a href="/" className="title is-3" style={{ paddingLeft: "5px" }}>
@@ -22,7 +27,7 @@ const Nav = ({ authenticated, setAuth, user }) => {
           </a>
         </div>
         {authenticated && (
-          <div className="navbar-end">
+          <div>
             <Settings user={user} />
             <button
               onClick={handleLogoutClick}

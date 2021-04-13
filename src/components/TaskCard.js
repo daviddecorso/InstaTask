@@ -8,7 +8,7 @@ import { isAfter } from "date-fns/esm";
 import { IconSquare, IconSquareCheck, IconChevronDown } from "@tabler/icons";
 import axios from "axios";
 import { toast } from "react-toastify";
-import EditTask from "./editTask"
+import EditTask from "./editTask";
 
 // Style for task cards
 const cardButtonStyle = {
@@ -17,7 +17,7 @@ const cardButtonStyle = {
   outline: "none",
 };
 
-function TaskCard({ event, zoomFilter, user }) {
+function TaskCard({ event, zoomFilter, user, index, events, setEvents }) {
   // Creates state for expandable task cards
   const [toggleDetail, setToggle] = useState(false);
 
@@ -66,6 +66,9 @@ function TaskCard({ event, zoomFilter, user }) {
         .catch((res) => {
           errorNotif();
         });
+      let tempEventsArr = [...events];
+      tempEventsArr.splice(index, 1);
+      setEvents(tempEventsArr);
     }
   };
 
@@ -122,7 +125,7 @@ function TaskCard({ event, zoomFilter, user }) {
                 </div>
                 <footer className="card-footer">
                   <a className="card-footer-item">
-                    <EditTask user = {user} event = {event}/>
+                    <EditTask user={user} event={event} />
                   </a>
                   <a onClick={deleteTask} className="card-footer-item">
                     Delete

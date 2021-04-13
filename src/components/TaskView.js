@@ -41,7 +41,8 @@ function TaskView({ events, setEvents, user }) {
     return comparison;
   }
 
-  let sortedEvents = events.sort(compareDates);
+  // let sortedEvents = events.sort(compareDates);
+  setEvents(events.sort(compareDates));
 
   const cardContainerStyle = {
     height: cardContainerHeight,
@@ -116,9 +117,12 @@ function TaskView({ events, setEvents, user }) {
             </div>
             <div style={cardContainerStyle}>
               {/* Displays a list of tasks */}
-              {sortedEvents.map((event) => (
+              {events.map((event, index) => (
                 <TaskCard
                   event={event}
+                  events={events}
+                  setEvents={setEvents}
+                  index={index}
                   zoomFilter={zoomFilter}
                   user={user}
                   key={event._id}

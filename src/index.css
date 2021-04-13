@@ -7,7 +7,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   #column {
     padding-right: 0px;
     margin-right: 0px;
@@ -17,4 +17,8 @@ body {
     padding-right: 0px;
     margin-right: 0px;
   }
+}
+
+html {
+  overflow: hidden;
 }

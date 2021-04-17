@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { render } from "@testing-library/react";
 
-function EditTask({ user, event }) {
+function EditTask({ user, event, index, events, setEvents }) {
   toast.configure();
   const successNotif = () =>
     toast.info("Successfuly Edited Task: " + eventName);
@@ -37,8 +37,23 @@ function EditTask({ user, event }) {
       course: null,
     };
 
+    const tempNewEvent = {
+      dtstart: selectedDate,
+      dtend: selectedDate,
+      desc: eventDesc,
+      location: null,
+      sequence: null,
+      url: null,
+      summary: eventName,
+      course: null,
+    };
+
     // Check if any values weren't changed
-    if (selectedDate === initialDate) newEvent.dtend = newEvent.dtstart = null;
+    if (selectedDate === initialDate) {
+      newEvent.dtend = newEvent.dtstart = null;
+      tempNewEvent.dtStart = event.dtStart;
+      tempNewEvent.dtEnd = event.dtEnd;
+    }
 
     if (eventDesc === initialDesc) newEvent.desc = null;
 
@@ -57,6 +72,10 @@ function EditTask({ user, event }) {
       .catch((res) => {
         errorNotif();
       });
+
+    let tempArr = [...events];
+    tempArr[index] = tempNewEvent;
+    setEvents(tempArr);
   };
 
   const onClick = () => {
@@ -162,11 +181,12 @@ function EditTask({ user, event }) {
                   </form>
                 </div>
               </form>
-              <form onSubmit={handleSubmit}>
+              <form>
                 <div className="level">
                   <div className="level-item" style={{ marginTop: "5%" }}>
                     <button
-                      type="submit"
+                      onClick={handleSubmit}
+                      type="button"
                       className="button is-primary"
                       id="submit"
                       data-testid="submit-button"

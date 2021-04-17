@@ -59,6 +59,7 @@ function Settings({ user }) {
           className="modal-background"
           id="settingsmodalbg"
           onClick={onClickExit}
+          data-testid= "settingsmodalbg"
         ></div>
         <div className="modal-card">
           <header className="modal-card-head">
@@ -69,18 +70,19 @@ function Settings({ user }) {
               className="delete"
               aria-label="close"
               onClick={onClickExit}
+              data-testid= "delete"
             ></button>
           </header>
-          <section className="modal-card-body">
+          <section className="modal-card-body" data-testid= "modal-card-body">
             <div className="content">
               <div className="block">
                 <div className="columns is-vcentered">
-                  <div className="column">
+                  <div className="column" data-testid= "column"> 
                     <p style={{ color: "white" }}>Default Notification Time</p>
                   </div>
                   <div className="column">
                     <div className="dropdown" id="dropdown-menu">
-                      <div className="dropdown-trigger">
+                      <div className="dropdown-trigger" data-testid= "dropdown-trigger">
                         <button
                           className="button is-primary"
                           aria-haspopup="true"
@@ -91,18 +93,18 @@ function Settings({ user }) {
                           <IconCaretDown color="white" size={28} stroke={2.0} />
                         </button>
                       </div>
-                      <div className="dropdown-menu" role="menu">
+                      <div className="dropdown-menu" role="menu" data-testid= "dropdown-menu">
                         <div className="dropdown-content">
-                          <div className="dropdown-item">
+                          <div className="dropdown-item" data-testid= "dropdown-item-one">
                             <p style={{ color: "black" }}>1 Hour</p>
                           </div>
-                          <div className="dropdown-item">
+                          <div className="dropdown-item" data-testid= "dropdown-item-two">
                             <p style={{ color: "black" }}>12 Hours</p>
                           </div>
-                          <div className="dropdown-item">
+                          <div className="dropdown-item" data-testid= "dropdown-item-three">
                             <p style={{ color: "black" }}>1 Day</p>
                           </div>
-                          <div className="dropdown-item">
+                          <div className="dropdown-item" data-testid= "dropdown-item-four">
                             <p style={{ color: "black" }}>1 Week</p>
                           </div>
                         </div>
@@ -152,6 +154,7 @@ function Settings({ user }) {
                         placeholder="Text input"
                         id="updateImportBox"
                         style={{ color: "black" }}
+                        data-testid= "updateImportBox"
                       ></input>
                     </div>
                   </div>
@@ -160,10 +163,10 @@ function Settings({ user }) {
             </div>
           </section>
           <footer className="modal-card-foot">
-            <button className="button is-success" onClick={onClickSave}>
+            <button className="button is-success" onClick={onClickSave} data-testid= "success-button">
               Save changes
             </button>
-            <button className="button is-danger" onClick={onClickExit}>
+            <button className="button is-danger" onClick={onClickExit} data-testid= "danger-button">
               Cancel
             </button>
           </footer>

@@ -41,7 +41,6 @@ function TaskView({ events, setEvents, user }) {
     return comparison;
   }
 
-  // let sortedEvents = events.sort(compareDates);
   setEvents(events.sort(compareDates));
 
   const cardContainerStyle = {
@@ -135,7 +134,12 @@ function TaskView({ events, setEvents, user }) {
             >
               <div className="level">
                 <div className="level-item">
-                  <AddTask user={user} />
+                  <AddTask
+                    user={user}
+                    events={events}
+                    setEvents={setEvents}
+                    compareDates={compareDates}
+                  />
                 </div>
               </div>
             </div>

@@ -4,7 +4,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-function AddTask({ user }) {
+function AddTask({ user, events, setEvents, compareDates }) {
   toast.configure();
   const success = () =>
     toast.info("Successfuly Added Task: " + eventName.value);
@@ -49,6 +49,16 @@ function AddTask({ user }) {
         .catch((res) => {
           failure();
         });
+
+      let tempEventsArr = [...events];
+      /*
+       * Ideally we would push the new event to the temp array and
+       * sort it, but it's not working for some reason so it's
+       * being added to the front of the array here.
+       */
+      tempEventsArr.unshift(newEvent);
+
+      setEvents(tempEventsArr);
     } else {
       failure();
     }

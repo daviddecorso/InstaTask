@@ -72,6 +72,8 @@ function TaskCard({ event, zoomFilter, user, index, events, setEvents }) {
     }
   };
 
+  let courseText = event.course == null ? "" : "[" + event.course + "]";
+
   const checkDate = () => {
     const yesterday = new Date(Date.now() - 864e5);
     return isAfter(new Date(event.dtstart), yesterday);
@@ -101,7 +103,7 @@ function TaskCard({ event, zoomFilter, user, index, events, setEvents }) {
                   )}
                 </span>
                 <a href={event.url} style={cardTextStyle}>
-                  [{event.course}] {event.summary} -{" "}
+                  {courseText} {event.summary} -{" "}
                   {format(new Date(event.dtstart), "eeee MMM d, h:mm aaa")}
                 </a>
               </p>

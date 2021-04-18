@@ -125,7 +125,13 @@ function TaskCard({ event, zoomFilter, user, index, events, setEvents }) {
                 </div>
                 <footer className="card-footer">
                   <a className="card-footer-item">
-                    <EditTask user={user} event={event} />
+                    <EditTask
+                      user={user}
+                      event={event}
+                      index={index}
+                      events={events}
+                      setEvents={setEvents}
+                    />
                   </a>
                   <a onClick={deleteTask} className="card-footer-item">
                     Delete

@@ -20,7 +20,7 @@ function EditTask({ user, event }) {
   const initialDesc = event.desc;
   const initialName = event.summary;
   const initialDate = event.dtend;
-  const [selectedDate, setSelectedDate] = useState(dateStamp);
+  const [selectedDate, setSelectedDate] = useState(event.dtend);
   const [open, openModal] = useState(false);
   const [eventName, changeEvent] = useState(event.summary);
   const [eventDesc, changeEventDesc] = useState(event.desc);

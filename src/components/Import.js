@@ -22,6 +22,10 @@ function Import({ user, setImport }) {
     } else {
       window.alert("Please submit a valid .ics URL.");
     }
+
+    setTimeout(() => {
+      window.location.reload();
+    }, 1000);
   };
 
   return (

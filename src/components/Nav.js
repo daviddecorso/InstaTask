@@ -1,6 +1,7 @@
 import React from "react";
 import Settings from "./Settings";
 import { IconLogout } from "@tabler/icons";
+import logo from "./img/logo2.png";
 
 const Nav = ({ authenticated, setAuth, user }) => {
   function handleLogoutClick() {
@@ -22,6 +23,11 @@ const Nav = ({ authenticated, setAuth, user }) => {
         }}
       >
         <div className="navbar-start" style={{ alignItems: "center" }}>
+          <img
+            src={logo}
+            alt="InstaTask Logo"
+            style={{ width: "25px", height: "25px", marginLeft: "5px" }}
+          ></img>
           <a href="/" className="title is-3" style={{ paddingLeft: "5px" }}>
             InstaTask
           </a>
